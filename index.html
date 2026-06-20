@@ -565,10 +565,47 @@
         .footer-base-row { border-top: 1px solid var(--border-glass); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.8rem; }
 
         /* Responsive Breakpoints Adaptations (Mobile-First Optimization) */
-        @media (max-width: 1024px) {
-            .grid-split-2, .footer-top-cluster { grid-template-columns: 1fr; gap: 3rem; }
-            .nav-menu { display: none; }
-            .mobile-toggle { display: flex; }
+      @media (max-width: 1024px) {
+
+    .grid-split-2, 
+    .footer-top-cluster {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 75px;
+        left: 0;
+        width: 100vw;
+        max-width: 100%;
+        height: calc(100vh - 75px);
+        background: rgba(3,7,18,0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        z-index: 2000;
+    }
+
+}
             .metric-counter-deck, .awards-tier-layout { grid-template-columns: 1fr; }
             .timeline-spine-track::before { left: 1rem; }
             .timeline-milestone-node { width: 100%; padding-left: 2.5rem; padding-right: 0; text-align: left !important; }

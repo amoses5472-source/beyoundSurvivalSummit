@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Transformation, Youth Reformation & Leadership Summit 2026</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-deep: #060919;
+            --bg-surface: rgba(13, 18, 41, 0.7);
+            --bg-card: rgba(22, 28, 61, 0.4);
+            --primary: #6366f1; /* Digital Purple */
+            --secondary: #d97706; /* Premium Gold/Amber */
+            --accent: #3b82f6; /* Tech Blue */
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --glow-purple: rgba(99, 102, 241, 0.15);
+            --glow-gold: rgba(217, 119, 6, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        /* Utility Components */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-padding {
+            padding: 8rem 0;
+        }
+
+        .text-center { text-align: center; }
+
+        .glass-panel {
+            background: var(--bg-surface);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 70%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+            font-size: 1.125rem;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #4f46e5);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(99, 102, 241, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 1px solid var(--border-glass);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--text-muted);
+            transform: translateY(-2px);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--secondary), #b45309);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(217, 119, 6, 0.3);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(217, 119, 6, 0.5);
+        }
+
+        /* Header Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-glass);
+            background: rgba(6, 9, 25, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .brand-logos {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .brand-logo-slot {
+            height: 40px;
+            width: auto;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .brand-logo-slot:hover { opacity: 1; }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.925rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover { color: var(--text-main); }
+
+        .nav-toggle {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            padding-top: 12rem;
+            padding-bottom: 8rem;
+            overflow: hidden;
+            background: radial-gradient(circle at 10% 20%, var(--glow-purple) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, var(--glow-gold) 0%, transparent 45%);
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 5.5rem);
+            line-height: 1.1;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .hero-theme {
+            font-size: clamp(1.25rem, 2.5vw, 2rem);
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            border-left: 4px solid var(--secondary);
+            padding-left: 1.5rem;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .hero-support-text {
+            color: var(--text-muted);
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .hero-date-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-glass);
+            padding: 1.5rem 3rem;
+            border-radius: 16px;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        .date-main {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            letter-spacing: 0.05em;
+        }
+
+        .date-sub {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+            text-transform: uppercase;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .about-metric-card {
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .metric-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff, var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Vision & Mission Cards */
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .vm-card {
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vm-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .vm-card.mission::before {
+            background: linear-gradient(90deg, var(--secondary), #f59e0b);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            color: var(--primary);
+        }
+
+        .mission .icon-box { color: var(--secondary); }
+
+        /* Focus Areas Grid */
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .focus-card {
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(13, 18, 41, 0.4);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+        }
+
+        .focus-card:hover {
+            transform: translateY(-8px);
+            background: var(--bg-card);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 12px 40px rgba(6, 9, 25, 0.6);
+        }
+
+        .focus-card h3 {
+            font-size: 1.35rem;
+            margin: 1rem 0 0.75rem 0;
+        }
+
+        .focus-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Timeline / Featured Activities */
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 2rem;
+        }
+
+        .activity-item {
+            padding: 2.5rem;
+            position: relative;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .activity-step {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--secondary);
+            background: rgba(217, 119, 6, 0.1);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* Challenge Section */
+        .challenge-box {
+            padding: 4rem;
+            background: linear-gradient(135deg, rgba(13,18,41,0.9) 0%, rgba(22,28,61,0.7) 100%);
+            border: 1px solid rgba(217, 119, 6, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .challenge-flex {
+            display: flex;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .challenge-graphic {
+            text-align: center;
+            position: relative;
+        }
+
+        .trophy-glow {
+            font-size: 8rem;
+            color: var(--secondary);
+            filter: drop-shadow(0 0 30px rgba(217,119,6,0.4));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .challenge-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .meta-pill {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-glass);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+        }
+
+        .meta-pill span {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .meta-pill strong {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        /* Founder Spotlight */
+        .founder-panel {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 4rem;
+        }
+
+        .founder-img-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            background: #161c3d;
+            border: 1px solid var(--border-glass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .founder-placeholder {
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .founder-title-sub {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .founder-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.05);
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-glass);
+        }
+
+        /* Continuous Logo Carousel */
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 4rem;
+            width: max-content;
+            animation: scroll 30s linear infinite;
+        }
+
+        .carousel-logo {
+            height: 50px;
+            width: 160px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Lightbox Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 16/10;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item i {
+            font-size: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            position: absolute;
+        }
+
+        .gallery-item:hover i { opacity: 1; }
+
+        /* Registration Form */
+        .split-form-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: rgba(6, 9, 25, 0.6);
+            border: 1px solid var(--border-glass);
+            border-radius: 10px;
+            color: white;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Info Block / Map Placement */
+        .contact-info-card {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-link-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .info-link-item i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-top: 0.25rem;
+        }
+
+        .map-placeholder {
+            height: 200px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        /* Footer configuration */
+        footer {
+            border-top: 1px solid var(--border-glass);
+            padding: 5rem 0 3rem 0;
+            background: #040612;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(3, 1fr);
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-logo-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo-stack p {
+            font-size: 1.2rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.925rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--secondary); }
+
+        .footer-motto {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-glass);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 1024px) {
+            .about-grid, .vm-grid, .challenge-flex, .founder-panel, .split-form-layout, .footer-top {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .nav-menu { display: none; }
+            .nav-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="brand-logos">
+                <!-- Replace 'src' with operational assets or programmatic identifiers via admin variables -->
+                <div class="brand-logo-slot font-heading" style="color:var(--primary); font-weight:700;">[TINATTI LOGO]</div>
+                <div class="brand-logo-slot font-heading" style="color:var(--secondary); font-weight:700;">[BEULAFY LOGO]</div>
+                <div class="brand-logo-slot font-heading" style="color:var(--accent); font-weight:700;">[FEDPOLY NASARAWA]</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#focus" class="nav-link">Focus Areas</a></li>
+                <li><a href="#activities" class="nav-link">Schedule</a></li>
+                <li><a href="#challenge" class="nav-link">Innovation Challenge</a></li>
+                <li><a href="#speakers" class="nav-link">Speakers</a></li>
+                <li><a href="#register" class="nav-link">Register</a></li>
+            </ul>
+            <div class="nav-toggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-glow"></div>
+        <div class="container text-center hero-content">
+            <div class="badge"><i class="fa-solid fa-bolt"></i> Global Leadership Initiative 2026</div>
+            <h1 class="hero-title gradient-text">Digital Transformation,<br>Youth Reformation &<br>Leadership Summit 2026</h1>
+            
+            <div class="hero-theme">
+                Beyond Survival: Building Ethical, Skilled and Future-Ready Leaders
+            </div>
+            
+            <p class="hero-support-text">
+                Empowering young people through technology, innovation, leadership, entrepreneurship, cybersecurity awareness, mentorship, and ethical transformation.
+            </p>
+
+            <div class="hero-date-box">
+                <div class="date-main">COMING SEPTEMBER 2026</div>
+                <div class="date-sub">Official Dynamic Date Platform Announcement Imminent</div>
+            </div>
+
+            <div class="btn-group">
+                <a href="#register" class="btn btn-primary">Register Interest <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#partner" class="btn btn-secondary">Become a Partner</a>
+                <a href="#challenge" class="btn btn-gold">Research Challenge</a>
+                <a href="#contact" class="btn btn-secondary">Sponsor Summit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <div class="badge">The Framework</div>
+                    <h2 class="section-title">Bridging the Gap Between Potential and Global Opportunity</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">The Digital Transformation, Youth Reformation & Leadership Summit 2026 is a premier development platform meticulously engineered to inspire the next generation of ethical leaders, tech visionaries, and high-impact entrepreneurs.</p>
+                    <p style="color: var(--text-muted);">As emerging technical systems redefine macroeconomic frameworks, this gathering creates an ecosystem equipping builders with advanced execution metrics, operational structures, and core digital disciplines to excel seamlessly.</p>
+                </div>
+                <div class="about-visual">
+                    <div class="glass-panel about-metric-card">
+                        <div class="metric-num">12+</div>
+                        <div style="color: var(--text-muted); font-size:0.9rem;">Focus Verticals</div>
+                    </div>
+                    <div class="glass-panel about-metric-card">
+                        <div class="metric-num">100%</div>
+                        <div style="color: var(--text-muted); font-size:0.9rem;">Ethical Blueprint</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision & Mission Inner Block -->
+            <div class="vm-grid">
+                <div class="glass-panel vm-card">
+                    <div class="icon-box"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">To raise a generation of ethical, skilled, innovative, and future-ready leaders capable of driving sustainable transformation within their immediate ecosystems and across international borders.</p>
+                </div>
+                <div class="glass-panel vm-card mission">
+                    <div class="icon-box"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">To aggressively empower young leaders through strategic technology disciplines, cybersecurity defenses, entrepreneurial models, and executive corporate networking while reinforcing national optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summit Focus Areas -->
+    <section id="focus" class="section-padding" style="background: rgba(13,18,41,0.2);">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge">Ecosystem Architecture</div>
+                <h2 class="section-title">Core Summit Focus Areas</h2>
+                <p class="section-desc">Twelve critical domains engineered to build comprehensive, future-ready mastery.</p>
+            </div>
+            
+            <div class="focus-grid">
+                <!-- Focus Domain Card Generator Templates -->
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--accent);"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Digital Transformation</h3>
+                    <p>Harnessing structural automation frameworks to revolutionize operations across emerging markets.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--secondary);"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Cybersecurity Awareness</h3>
+                    <p>Securing the modern perimeter while defending core system infrastructure from vulnerabilities.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--primary);"><i class="fa-solid fa-arrows-spin"></i></div>
+                    <h3>Youth Reformation</h3>
+                    <p>Redirecting raw focus and potential into highly structured national impact initiatives.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--accent);"><i class="fa-solid fa-gavel"></i></div>
+                    <h3>Ethical Leadership</h3>
+                    <p>Building high-integrity frameworks that balance regulatory transparency with corporate vision.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--secondary);"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>Innovation & Entrepreneurship</h3>
+                    <p>Transitioning ideas into highly scalable, investable technology ventures and models.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--primary);"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Deploying machine learning models ethically to supercharge daily productivity parameters.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--accent);"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Digital Skills Development</h3>
+                    <p>Mastering core technologies, from application architecture to engineering capabilities.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--secondary);"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Career Development</h3>
+                    <p>Navigating global employment markets using data-driven personal placement systems.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--primary);"><i class="fa-solid fa-flag"></i></div>
+                    <h3>National Development</h3>
+                    <p>Sustaining localized economic growth through structured civic engagement initiatives.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--accent);"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Mentorship & Networking</h3>
+                    <p>Establishing collaborative elite pathways between corporate visionaries and students.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--secondary);"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>Future Workforce Readiness</h3>
+                    <p>Preempting market alignment requirements to dynamically future-proof career paths.</p>
+                </div>
+                <div class="focus-card">
+                    <div class="icon-box" style="color:var(--primary);"><i class="fa-solid fa-users"></i></div>
+                    <h3>Community Impact</h3>
+                    <p>Scaling grassroots transformation through verified structural program architectures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Activities Layout -->
+    <section id="activities" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge">The Agenda</div>
+                <h2 class="section-title">High-Impact Summit Matrix</h2>
+                <p class="section-desc">A carefully curated layout designed to optimize learning pathways, execution strategy, and high-level networking.</p>
+            </div>
+
+            <div class="activity-grid">
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">01</div>
+                    <div><h3>Opening Ceremony</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Launching the framework with key stakeholders, cultural metrics, and introductory keynotes.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">02</div>
+                    <div><h3>Keynote Presentations</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Global leaders exploring macroeconomic tech transformation and structural shifting.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">03</div>
+                    <div><h3>Leadership Masterclasses</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Intensive sessions focused on executive presence, ethics, and strategic scaling.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">04</div>
+                    <div><h3>Cybersecurity Deep-Dives</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Real-world defensive frameworks, ethical hacking threat analysis, and protection protocols.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">05</div>
+                    <div><h3>Innovation Showcase</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Live platforms highlighting hardware architectures, systems engineering, and early-stage models.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">06</div>
+                    <div><h3>Technology Demonstrations</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Direct hands-on interaction with scalable artificial intelligence tooling frameworks.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">07</div>
+                    <div><h3>Youth Development Sessions</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Targeted focus panels breaking down regional empowerment mechanics.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">08</div>
+                    <div><h3>Panel Discussions</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Interactive debates on policy frameworks with industry decision-makers.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">09</div>
+                    <div><h3>Networking Sessions</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Facilitating valuable professional connections between delegates and elite corporate entities.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">10</div>
+                    <div><h3>Research Challenge Pitches</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Finalist evaluations before the executive board and expert technical panels.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">11</div>
+                    <div><h3>Awards Ceremony</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Honoring top talent, exceptional innovators, and transformative regional builders.</p></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-step">12</div>
+                    <div><h3>Closing Leadership Address</h3><p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem;">Setting long-term strategic roadmaps for the 2026/2027 regional development cycle.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Challenge Section -->
+    <section id="challenge" class="section-padding" style="background:radial-gradient(circle at center, rgba(217,119,6,0.05) 0%, transparent 70%);">
+        <div class="container">
+            <div class="glass-panel challenge-box">
+                <div class="challenge-flex">
+                    <div>
+                        <div class="badge" style="color:var(--secondary); border-color:rgba(217,119,6,0.3); background:rgba(217,119,6,0.05);">Executive Competition</div>
+                        <h2 style="font-size:clamp(1.75rem, 3vw, 2.75rem); margin-bottom:1rem;">Future Leaders Research & Innovation Challenge 2026</h2>
+                        
+                        <p style="color:var(--secondary); font-weight:600; font-size:1.1rem; margin-bottom:1.5rem;">
+                            Topic: Innovative Strategies for Combating Cybercrime and Redirecting Youth Potential Towards National Development
+                        </p>
+                        
+                        <p style="color:var(--text-muted); font-size:0.95rem;">
+                            We invite advanced academic submissions targeting architectural policy frameworks, software-defined mitigation systems, and strategic social models designed to convert raw digital capabilities into localized national economic engines.
+                        </p>
+
+                        <div class="challenge-meta-grid">
+                            <div class="meta-pill">
+                                <span>Submission Deadline</span>
+                                <strong>30 August 2026</strong>
+                            </div>
+                            <div class="meta-pill">
+                                <span>Opportunities Provided</span>
+                                <strong>Publication & VC Access</strong>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:2rem;">
+                            <a href="#register" class="btn btn-gold">Submit Entry <i class="fa-solid fa-upload"></i></a>
+                            <a href="#" class="btn btn-secondary">Learn Challenge Guidelines</a>
+                        </div>
+                    </div>
+                    <div class="challenge-graphic">
+                        <i class="fa-solid fa-trophy trophy-glow"></i>
+                        <div style="margin-top:2rem; font-weight:600; letter-spacing:0.05em; font-size:0.9rem; text-transform:uppercase; color:var(--text-main);">
+                            Recognition & Executive Mentorship
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder/Host Spotlight Section -->
+    <section id="host" class="section-padding">
+        <div class="container">
+            <div class="glass-panel founder-panel">
+                <div class="founder-img-wrapper">
+                    <div class="founder-placeholder">
+                        <i class="fa-solid fa-user-shield" style="font-size:4rem; color:var(--secondary); margin-bottom:1rem;"></i>
+                        <p>[ Andrew Moses Image Asset Placeholder ]</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="founder-title-sub">Meet the Host & Chief Visionary</div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Andrew Moses</h2>
+                    <p style="font-style: italic; color: var(--text-muted); margin-bottom:1rem;">Popularly Known As: <strong style="color:var(--secondary);">Alhemdrew Davenchi</strong></p>
+                    
+                    <div class="founder-tags">
+                        <span class="tag">Founder, Beulafy</span>
+                        <span class="tag">Founder & Director, Tinatti Initiative</span>
+                        <span class="tag">Web Application Developer</span>
+                        <span class="tag">Cybersecurity Practitioner</span>
+                        <span class="tag">Certified Cybersecurity Educator Professional (CCEP)</span>
+                    </div>
+
+                    <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">
+                        Andrew Moses is a prominent technology innovator, specialized systems architect, and youth development champion dedicated to turning latent talent into structural digital assets. Operating at the modern intersection of infrastructure security, technology incubation, and leadership formation, his platforms provide thousands of young developers with scalable launchpads globally.
+                    </p>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Placeholder Section -->
+    <section id="speakers" class="section-padding" style="background: rgba(13,18,41,0.1);">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge">Faculty Leaders</div>
+                <h2 class="section-title">The Speakers Lineup</h2>
+                <p class="section-desc">Connecting enterprise technology builders, high-level public policy executives, and industry leaders.</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:2rem;">
+                <!-- Unlimited Speaker Slot Component Loop Placeholder -->
+                <div class="glass-panel" style="padding:1.5rem; text-align:center;">
+                    <div style="height:220px; background:#161c3d; border-radius:12px; margin-bottom:1rem; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">[ Photo Asset Placeholder ]</div>
+                    <h4 style="font-size:1.2rem;">Speaker Call Open</h4>
+                    <p style="color:var(--secondary); font-size:0.85rem; font-weight:600; margin-bottom:0.5rem;">Enterprise Architecture</p>
+                    <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.4;">Programmatic profiles dynamically populated via CMS parameters.</p>
+                </div>
+                <div class="glass-panel" style="padding:1.5rem; text-align:center;">
+                    <div style="height:220px; background:#161c3d; border-radius:12px; margin-bottom:1rem; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">[ Photo Asset Placeholder ]</div>
+                    <h4 style="font-size:1.2rem;">Global Policy Leader</h4>
+                    <p style="color:var(--secondary); font-size:0.85rem; font-weight:600; margin-bottom:0.5rem;">Civic Reformation</p>
+                    <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.4;">Programmatic profiles dynamically populated via CMS parameters.</p>
+                </div>
+                <div class="glass-panel" style="padding:1.5rem; text-align:center;">
+                    <div style="height:220px; background:#161c3d; border-radius:12px; margin-bottom:1rem; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">[ Photo Asset Placeholder ]</div>
+                    <h4 style="font-size:1.2rem;">SecOps Expert</h4>
+                    <p style="color:var(--secondary); font-size:0.85rem; font-weight:600; margin-bottom:0.5rem;">Cyber Security</p>
+                    <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.4;">Programmatic profiles dynamically populated via CMS parameters.</p>
+                </div>
+                <div class="glass-panel" style="padding:1.5rem; text-align:center;">
+                    <div style="height:220px; background:#161c3d; border-radius:12px; margin-bottom:1rem; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">[ Photo Asset Placeholder ]</div>
+                    <h4 style="font-size:1.2rem;">VC Investor</h4>
+                    <p style="color:var(--secondary); font-size:0.85rem; font-weight:600; margin-bottom:0.5rem;">Sovereign Technology</p>
+                    <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.4;">Programmatic profiles dynamically populated via CMS parameters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Loop Carousel -->
+    <section id="partner" class="section-padding" style="border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+        <div class="container text-center">
+            <div class="badge">Allied Networks</div>
+            <h3 style="margin-bottom: 2rem; font-size: 1.75rem;">Supported by Leading Organizations Worldwide</h3>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-logo">Tech Companies</div>
+                    <div class="carousel-logo">Government Agencies</div>
+                    <div class="carousel-logo">NGO Ecosystems</div>
+                    <div class="carousel-logo">Innovation Hubs</div>
+                    <div class="carousel-logo">Academic Institutions</div>
+                    <div class="carousel-logo">Development Orgs</div>
+                    <!-- Duplicate loop items for smooth endless performance -->
+                    <div class="carousel-logo">Tech Companies</div>
+                    <div class="carousel-logo">Government Agencies</div>
+                    <div class="carousel-logo">NGO Ecosystems</div>
+                    <div class="carousel-logo">Innovation Hubs</div>
+                    <div class="carousel-logo">Academic Institutions</div>
+                    <div class="carousel-logo">Development Orgs</div>
+                </div>
+            </div>
+
+            <div style="margin-top:4rem;" class="glass-panel padding-box">
+                <div style="padding:3rem;">
+                    <h3 style="font-size:1.75rem; margin-bottom:1rem;">Become an Ecosystem Partner</h3>
+                    <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2rem auto; font-size:0.95rem;">Join us in shaping the next generation of ethical leaders, digital innovators, and responsible global citizens. Choose from multiple strategic placement structures.</p>
+                    <div class="btn-group">
+                        <span class="tag">Strategic Partnerships</span>
+                        <span class="tag">Media Partnerships</span>
+                        <span class="tag">Training Partnerships</span>
+                        <span class="tag">Exhibition Opportunities</span>
+                        <span class="tag">Corporate Sponsorships</span>
+                    </div>
+                    <div style="margin-top:2.5rem;">
+                        <a href="#contact" class="btn btn-primary">Partner With Us <i class="fa-solid fa-handshake"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Lightbox Preview -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge">Moments</div>
+                <h2 class="section-title">Summit Media Gallery</h2>
+                <p class="section-desc">Capturing key milestones from continuous regional youth engagement initiatives.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><i class="fa-solid fa-expand"></i>[ Media Preview 01 ]</div>
+                <div class="gallery-item"><i class="fa-solid fa-expand"></i>[ Media Preview 02 ]</div>
+                <div class="gallery-item"><i class="fa-solid fa-expand"></i>[ Media Preview 03 ]</div>
+                <div class="gallery-item"><i class="fa-solid fa-expand"></i>[ Media Preview 04 ]</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="section-padding" style="background: rgba(13,18,41,0.3);">
+        <div class="container">
+            <div class="split-form-layout">
+                <div class="glass-panel" style="padding: 3.5rem;">
+                    <div class="badge">Join the Future</div>
+                    <h2 style="font-size:2.2rem; margin-bottom:1rem;">Register Your Summit Interest</h2>
+                    <p style="color: var(--text-muted); margin-bottom:2.5rem; font-size:0.95rem;">Secure early access notifications, schedule updates, workshop tracks, and research platform access links.</p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Interest submitted successfully.');">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter full legal name" required>
+                        </div>
+                        <div class="form-group" style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+                            <div>
+                                <label>Institution / Corporate Body</label>
+                                <input type="text" class="form-control" placeholder="Entity name" required>
+                            </div>
+                            <div>
+                                <label>Department / Office Unit</label>
+                                <input type="text" class="form-control" placeholder="Your department" required>
+                            </div>
+                        </div>
+                        <div class="form-group" style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+                            <div>
+                                <label>Level / Professional Grade</label>
+                                <input type="text" class="form-control" placeholder="e.g., 400 Level / Lead Specialist">
+                            </div>
+                            <div>
+                                <label>Area of Core Interest</label>
+                                <select class="form-control" style="background:#0c1026;">
+                                    <option>Digital Transformation Track</option>
+                                    <option>Cybersecurity Training Domain</option>
+                                    <option>Research Challenge Entry</option>
+                                    <option>Executive Leadership Masterclass</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+                            <div>
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="name@domain.com" required>
+                            </div>
+                            <div>
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="+234..." required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:1rem;">Submit Registration Form</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info Panel & Map -->
+                <div id="contact" class="glass-panel contact-info-card">
+                    <div>
+                        <h3 style="font-size:1.75rem; margin-bottom:1.5rem;">Summit Communications Hub</h3>
+                        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:2rem;">For direct institutional inquiries, sponsorship matrices, and logistical collaboration parameters, contact the main desk.</p>
+                    </div>
+
+                    <div class="info-link-item">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div>
+                            <div style="font-size:0.85rem; color:var(--text-muted);">Phone Communications</div>
+                            <strong>[Insert Number]</strong>
+                        </div>
+                    </div>
+                    <div class="info-link-item">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                        <div>
+                            <div style="font-size:0.85rem; color:var(--text-muted);">Secure Email Inquiries</div>
+                            <strong>[Insert Email]</strong>
+                        </div>
+                    </div>
+                    <div class="info-link-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <div>
+                            <div style="font-size:0.85rem; color:var(--text-muted);">Digital Headquarters</div>
+                            <strong>[Insert Website]</strong>
+                        </div>
+                    </div>
+                    <div class="info-link-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <div style="font-size:0.85rem; color:var(--text-muted);">Physical Summit Venue Host</div>
+                            <strong>Federal Polytechnic Nasarawa, Nigeria</strong>
+                        </div>
+                    </div>
+
+                    <div class="map-placeholder">
+                        <i class="fa-solid fa-map-location-dot" style="margin-right:0.75rem;"></i> Dynamic Google Maps API Anchor Placeholder
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo-stack">
+                    <p class="gradient-text">DYRL SUMMIT 2026</p>
+                    <span style="color:var(--text-muted); font-size:0.9rem; line-height:1.4;">
+                        Organized by Tinatti Initiative, in strategic partnership with Beulafy, hosted on-site by Federal Polytechnic Nasarawa.
+                    </span>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#about">About Architecture</a></li>
+                        <li><a href="#focus">Focus Verticals</a></li>
+                        <li><a href="#activities">Event Agenda</a></li>
+                        <li><a href="#challenge">Research Arena</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support Tracks</h4>
+                    <ul>
+                        <li><a href="#partner">Become a Partner</a></li>
+                        <li><a href="#contact">Sponsorship Pitch</a></li>
+                        <li><a href="#register">Delegate Portals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Institutional Alliances</h4>
+                    <div style="display:flex; flex-direction:column; gap:0.5rem; color:var(--text-muted); font-size:0.85rem;">
+                        <div>[TINATTI INITIATIVE]</div>
+                        <div>[BEULAFY]</div>
+                        <div>[FEDERAL POLYTECHNIC NASARAWA]</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-motto">
+                Together, We Reform. &nbsp;Together, We Lead. &nbsp;Together, We Build.
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Digital Transformation, Youth Reformation & Leadership Summit. Engineered for comprehensive global impact.
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Control Script -->
+    <script>
+        const toggleBtn = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.nav-menu');
+
+        toggleBtn.addEventListener('click', () => {
+            if(menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+                menu.style.flexDirection = 'column';
+                menu.style.position = 'absolute';
+                menu.style.top = '80px';
+                menu.style.left = '0';
+                menu.style.width = '100%';
+                menu.style.background = 'rgba(6, 9, 25, 0.95)';
+                menu.style.padding = '2rem';
+                menu.style.borderBottom = '1px solid var(--border-glass)';
+            }
+        });
+    </script>
+</body>
+</html>

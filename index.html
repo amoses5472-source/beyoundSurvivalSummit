@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Transformation, Youth Reformation & Leadership Summit 2026</title>
-    <!-- Premium Fonts & Icons -->
+    <!-- Premium Typography & Iconography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,9 +15,9 @@
             --bg-base: #030712;
             --bg-surface: rgba(10, 15, 36, 0.75);
             --bg-card: rgba(17, 24, 57, 0.45);
-            --primary: #8b5cf6; /* Tech Purple */
+            --primary: #8b5cf6; /* Digital Tech Purple */
             --primary-glow: rgba(139, 92, 246, 0.2);
-            --secondary: #d97706; /* Metallic Gold */
+            --secondary: #d97706; /* Metallic Summit Gold */
             --secondary-glow: rgba(217, 119, 6, 0.25);
             --navy-light: #1e293b;
             --text-pure: #ffffff;
@@ -29,7 +29,7 @@
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* Reset and Base Global Styles */
+        /* Reset and Global Micro-Layout Architectures */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -38,7 +38,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 90px;
+            scroll-padding-top: 80px;
         }
 
         body {
@@ -46,13 +46,14 @@
             color: var(--text-body);
             font-family: var(--font-sans);
             overflow-x: hidden;
-            line-height: 1.7;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar { width: 10px; }
+        /* Scrollbar Core Customization */
+        ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-base); }
-        ::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
 
         h1, h2, h3, h4, h5, h6 {
@@ -62,15 +63,16 @@
             letter-spacing: -0.02em;
         }
 
-        /* Atomic Utility Classes */
+        /* Layout Framework Foundations */
         .container {
-            max-width: 1320px;
+            width: 100%;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
 
         .section {
-            padding: 8rem 0;
+            padding: clamp(4rem, 8vw, 8rem) 0;
             position: relative;
         }
 
@@ -79,13 +81,14 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--border-glass);
-            border-radius: 20px;
+            border-radius: 16px;
             transition: var(--transition);
         }
 
         .glass-card:hover {
             border-color: rgba(139, 92, 246, 0.3);
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+            transform: translateY(-2px);
         }
 
         .gradient-text {
@@ -98,36 +101,31 @@
 
         .section-header {
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto 5rem auto;
+            max-width: 750px;
+            margin: 0 auto clamp(3rem, 6vw, 5rem) auto;
         }
 
         .section-tag {
             font-family: var(--font-display);
             color: var(--secondary);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             display: inline-block;
         }
 
         .section-title {
-            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-size: clamp(1.8rem, 4vw, 3rem);
             line-height: 1.2;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
-        .section-desc {
-            font-size: 1.15rem;
-            color: var(--text-body);
-        }
-
-        /* Buttons & Actions */
+        /* Action Controls Layout Matrix */
         .btn-container {
             display: flex;
-            gap: 1.25rem;
+            gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -135,38 +133,34 @@
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
-            padding: 1.1rem 2.2rem;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
             border-radius: 50px;
             font-family: var(--font-display);
             font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
             cursor: pointer;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             border: none;
+            white-space: nowrap;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), #6d28d9);
             color: var(--text-pure);
-            box-shadow: 0 4px 20px var(--primary-glow);
+            box-shadow: 0 4px 15px var(--primary-glow);
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
         }
 
         .btn-gold {
             background: linear-gradient(135deg, var(--secondary), #b45309);
             color: var(--text-pure);
-            box-shadow: 0 4px 20px var(--secondary-glow);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(217, 119, 6, 0.4);
+            box-shadow: 0 4px 15px var(--secondary-glow);
         }
 
         .btn-outline {
@@ -177,11 +171,9 @@
 
         .btn-outline:hover {
             background: rgba(255, 255, 255, 0.08);
-            border-color: var(--text-body);
-            transform: translateY(-3px);
         }
 
-        /* Background Particle Mesh Canvas Effect */
+        /* Background Graphics Layer */
         .bg-mesh {
             position: absolute;
             top: 0;
@@ -189,25 +181,24 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(at 10% 10%, rgba(139, 92, 246, 0.12) 0px, transparent 50%),
-                radial-gradient(at 90% 20%, rgba(217, 119, 6, 0.1) 0px, transparent 50%),
-                radial-gradient(at 50% 80%, rgba(30, 27, 75, 0.5) 0px, transparent 70%);
+                radial-gradient(at 5% 5%, rgba(139, 92, 246, 0.1) 0px, transparent 40%),
+                radial-gradient(at 95% 15%, rgba(217, 119, 6, 0.08) 0px, transparent 40%);
             z-index: 0;
             pointer-events: none;
         }
 
-        /* Fixed Navigation Header */
+        /* Premium Minimal Navigation HUD */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(3, 7, 18, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-glass);
-            height: 90px;
+            height: 75px;
             display: flex;
             align-items: center;
         }
@@ -219,35 +210,33 @@
             width: 100%;
         }
 
-        .cms-logos {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .cms-logo-block {
+        .platform-logo {
             font-family: var(--font-display);
-            font-size: 0.75rem;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
             font-weight: 700;
             letter-spacing: 0.05em;
-            text-transform: uppercase;
-            padding: 0.4rem 0.8rem;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px dashed var(--border-glass);
-            border-radius: 6px;
-            color: var(--text-body);
+            color: var(--text-pure);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .platform-logo span {
+            color: var(--secondary);
         }
 
         .nav-menu {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-link {
             color: var(--text-body);
             text-decoration: none;
-            font-size: 0.925rem;
+            font-size: 0.875rem;
             font-weight: 500;
             font-family: var(--font-display);
             transition: var(--transition);
@@ -260,795 +249,368 @@
         .mobile-toggle {
             display: none;
             color: var(--text-pure);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             cursor: pointer;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Hero Canvas Section */
+        /* Clean Institutional Banner Integration (Moved from Nav) */
+        .institution-affiliation-strip {
+            background: rgba(17, 24, 57, 0.3);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 1rem 0;
+            font-size: 0.75rem;
+            font-family: var(--font-display);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .strip-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .strip-item span {
+            color: var(--text-body);
+            margin-left: 0.25rem;
+        }
+
+        /* Hero Responsive Section Canvas */
         #hero {
-            padding: 13rem 0 9rem 0;
-            min-height: 100vh;
+            padding: clamp(8rem, 15vw, 11rem) 0 clamp(4rem, 10vw, 6rem) 0;
+            min-height: 85vh;
             display: flex;
             align-items: center;
-            background-image: linear-gradient(to bottom, rgba(3,7,18,0.5), var(--bg-base)), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 48c-2 0-3 1-4 2v4c0 1-1 2-2 2H4c-1 0-2-1-2-2v-4c0-1-1-2-4-2v-2c3 0 4-1 4-2v-4c0-1 1-2 2-2h42c1 0 2 1 2 2v4c0 1 1 2 4 2v2zM6 46c-1 0-2 1-2 2v4c0 1 1 2 2 2h36c1 0 2-1 2-2v-4c0-1-1-2-2-2H6z' fill='%231e293b' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-image: linear-gradient(to bottom, rgba(3,7,18,0.3), var(--bg-base)), url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm20 20h20v20H20V20z' fill='%231e293b' fill-opacity='0.08'/%3E%3C/svg%3E");
         }
 
         .hero-badge {
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid rgba(139, 92, 246, 0.2);
+            background: rgba(139, 92, 246, 0.08);
+            border: 1px solid rgba(139, 92, 246, 0.15);
             color: #d8b4fe;
-            padding: 0.6rem 1.5rem;
+            padding: 0.5rem 1.25rem;
             border-radius: 100px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 2.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
         }
 
         .hero-headline {
-            font-size: clamp(2.8rem, 7vw, 5.5rem);
-            line-height: 1.05;
+            font-size: clamp(2.2rem, 6vw, 4.2rem);
+            line-height: 1.1;
             font-weight: 800;
             text-transform: uppercase;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .hero-theme-box {
             border-left: 3px solid var(--secondary);
-            padding-left: 2rem;
-            max-width: 800px;
-            margin: 0 auto 2.5rem auto;
+            padding-left: 1.5rem;
+            max-width: 750px;
+            margin: 0 auto 2rem auto;
             text-align: left;
         }
 
         .hero-theme-title {
-            font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
             color: var(--text-pure);
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.3;
         }
 
         .hero-description {
-            font-size: 1.25rem;
-            max-width: 850px;
-            margin: 0 auto 3.5rem auto;
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            max-width: 800px;
+            margin: 0 auto 2.5rem auto;
             color: var(--text-body);
         }
 
         .hero-countdown-ticker {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-glass);
-            padding: 1.25rem 3rem;
-            border-radius: 16px;
+            padding: 1rem 2rem;
+            border-radius: 12px;
             display: inline-flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 3rem;
         }
 
         .ticker-time {
             font-family: var(--font-display);
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--secondary);
             letter-spacing: 0.05em;
         }
 
-        .ticker-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-top: 0.25rem;
-        }
-
-        /* Executive Organizer Content Grids */
-        .organizer-grid {
+        /* Grid System Core Configurations */
+        .grid-split-2 {
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 4rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: clamp(2rem, 5vw, 4rem);
             align-items: center;
         }
 
         .goals-card-matrix {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .interactive-goal-node {
-            padding: 1.75rem;
+            padding: 1.25rem;
             background: var(--bg-card);
             border: 1px solid var(--border-glass);
-            border-radius: 14px;
+            border-radius: 12px;
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
-            transition: var(--transition);
+            gap: 0.5rem;
         }
 
-        .interactive-goal-node:hover {
-            transform: scale(1.03);
-            background: rgba(139, 92, 246, 0.05);
-            border-color: var(--primary);
-        }
-
-        .node-icon {
-            color: var(--secondary);
-            font-size: 1.35rem;
-        }
-
-        .node-title {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text-pure);
-        }
-
-        /* Strategic Partner Presentation Block */
-        .partner-showcase-box {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
+        .node-icon { color: var(--secondary); font-size: 1.2rem; }
+        .node-title { font-size: 0.95rem; font-weight: 600; color: var(--text-pure); }
 
         .focus-pill-cluster {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 2rem;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
         }
 
         .focus-pill {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border-glass);
-            padding: 0.6rem 1.25rem;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
-            font-size: 0.9rem;
-            color: var(--text-body);
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .focus-pill:hover {
-            background: rgba(139, 92, 246, 0.08);
-            color: var(--text-pure);
-            border-color: var(--primary);
-        }
-
-        /* Modern Crime Management/Host Section Framework */
-        .host-grid-system {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 4rem;
+            gap: 0.4rem;
         }
 
         .benefit-strip-item {
             display: flex;
             align-items: flex-start;
-            gap: 1.25rem;
-            padding: 1.25rem;
+            gap: 1rem;
+            padding: 1rem;
             border-bottom: 1px solid var(--border-glass);
-            transition: var(--transition);
-        }
-
-        .benefit-strip-item:hover {
-            background: rgba(255, 255, 255, 0.02);
-            padding-left: 2rem;
         }
 
         .strip-indicator {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             background: rgba(217, 119, 6, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--secondary);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             flex-shrink: 0;
-            margin-top: 0.25rem;
         }
 
-        /* Visual Media Showcases (Flyer lightboxes) */
-        .flyer-viewport-wrapper {
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
+        /* Media Frame Layout Architecture */
+        .flyer-viewport-wrapper { max-width: 650px; margin: 0 auto; }
         .flyer-frame-canvas {
             width: 100%;
             aspect-ratio: 16/10;
             background: radial-gradient(circle, #1e1b4b 0%, #030712 100%);
             border: 1px solid var(--border-glass);
-            border-radius: 24px;
+            border-radius: 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 30px 60px -20px rgba(0,0,0,0.8);
         }
 
-        .placeholder-artwork-layer {
-            text-align: center;
-            color: var(--text-muted);
-            padding: 2rem;
-        }
-
-        .placeholder-artwork-layer i {
-            font-size: 4rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            opacity: 0.7;
-        }
-
+        .placeholder-artwork-layer { text-align: center; color: var(--text-muted); padding: 1rem; }
+        .placeholder-artwork-layer i { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
+        
         .flyer-toolbar-actions {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             background: linear-gradient(to top, rgba(3,7,18,0.95), transparent);
-            padding: 2rem;
+            padding: 1.5rem;
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            transform: translateY(20px);
-            opacity: 0;
-            transition: var(--transition);
+            gap: 0.75rem;
+            flex-wrap: wrap;
         }
 
-        .flyer-frame-canvas:hover .flyer-toolbar-actions {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        /* Core Focus Vertical Matrices */
         .vertical-focus-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-            gap: 1.75rem;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
         }
 
-        .premium-focus-box {
-            padding: 2.5rem 2rem;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
+        .premium-focus-box { padding: 2rem 1.5rem; }
+        .premium-focus-box h3 { font-size: 1.15rem; margin: 1rem 0 0.5rem 0; }
+        .premium-focus-box p { font-size: 0.9rem; }
 
-        .premium-focus-box h3 {
-            font-size: 1.3rem;
-            margin: 1.5rem 0 0.75rem 0;
-        }
-
-        .premium-focus-box p {
-            color: var(--text-body);
-            font-size: 0.95rem;
-        }
-
-        /* Premium Value Metric Vectors */
+        /* Metrics Grid Layout */
         .metric-counter-deck {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-bottom: 5rem;
+            gap: 1.25rem;
+            margin-bottom: 4rem;
         }
 
-        .metric-counter-node {
-            text-align: center;
-            padding: 2.5rem 1.5rem;
-        }
-
+        .metric-counter-node { text-align: center; padding: 1.75rem 1rem; }
         .counter-numeric {
             font-family: var(--font-display);
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--text-pure);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #fff, var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.25rem;
         }
 
-        /* Core Master Timeline Architecture */
-        .timeline-spine-track {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
+        /* Program Agenda Core Timeline Layout */
+        .timeline-spine-track { position: relative; max-width: 800px; margin: 0 auto; }
         .timeline-spine-track::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            width: 2px;
-            height: 100%;
+            content: ''; position: absolute; left: 50%; top: 0; width: 2px; height: 100%;
             background: linear-gradient(to bottom, var(--primary), var(--secondary), transparent);
             transform: translateX(-50%);
         }
 
-        .timeline-milestone-node {
-            position: relative;
-            width: 50%;
-            padding: 2rem 3rem;
-            box-sizing: border-box;
-        }
-
-        .timeline-milestone-node:nth-child(odd) {
-            left: 0;
-            text-align: right;
-        }
-
-        .timeline-milestone-node:nth-child(even) {
-            left: 50%;
-            text-align: left;
-        }
-
+        .timeline-milestone-node { position: relative; width: 50%; padding: 1.5rem 2rem; box-sizing: border-box; }
+        .timeline-milestone-node:nth-child(odd) { left: 0; text-align: right; }
+        .timeline-milestone-node:nth-child(even) { left: 50%; text-align: left; }
         .timeline-milestone-node::after {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background: var(--bg-base);
-            border: 3px solid var(--secondary);
-            border-radius: 50%;
-            top: 2.5rem;
-            z-index: 2;
+            content: ''; position: absolute; width: 12px; height: 12px; background: var(--bg-base);
+            border: 3px solid var(--secondary); border-radius: 50%; top: 2.2rem; z-index: 2;
         }
+        .timeline-milestone-node:nth-child(odd)::after { right: -7px; }
+        .timeline-milestone-node:nth-child(even)::after { left: -7px; }
+        .timeline-node-inner { padding: 1.5rem; }
+        .timeline-node-inner h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
 
-        .timeline-milestone-node:nth-child(odd)::after { right: -11px; }
-        .timeline-milestone-node:nth-child(even)::after { left: -11px; }
-
-        .timeline-node-inner {
-            padding: 2rem;
-        }
-
-        .timeline-node-inner h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-pure);
-        }
-
-        /* Innovation & Challenge Framework Area */
+        /* Innovation Block Design Rules */
         .challenge-master-shield {
-            background: radial-gradient(circle at 90% 10%, rgba(217,119,6,0.12) 0%, transparent 60%), var(--bg-surface);
-            padding: 4.5rem;
-            border-radius: 30px;
+            background: radial-gradient(circle at 90% 10%, rgba(217,119,6,0.08) 0%, transparent 60%), var(--bg-surface);
+            padding: clamp(2rem, 5vw, 4rem);
+            border-radius: 24px;
             border: 1px solid rgba(217, 119, 6, 0.2);
         }
 
         .awards-tier-layout {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin: 3.5rem 0;
+            gap: 1.25rem;
+            margin: 2.5rem 0;
         }
 
-        .award-tier-card {
-            padding: 2.5rem 2rem;
-            position: relative;
-            background: rgba(255,255,255,0.01);
-        }
-
-        .award-tier-card.grand-prize {
-            border-color: rgba(217, 119, 6, 0.4);
-            background: rgba(217, 119, 6, 0.03);
-        }
-
-        .award-tier-card h4 {
-            font-size: 1.35rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .award-perk-list {
-            list-style: none;
-            text-align: left;
-            font-size: 0.925rem;
-        }
-
-        .award-perk-list li {
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-        }
-
-        .award-perk-list li i {
-            color: var(--secondary);
-            margin-top: 0.25rem;
-        }
-
-        /* Founder Blueprint Spotlight Display Layout */
-        .founder-super-profile {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 5rem;
-            align-items: center;
-        }
+        .award-tier-card { padding: 2rem 1.5rem; }
+        .award-tier-card.grand-prize { border-color: rgba(217, 119, 6, 0.3); background: rgba(217, 119, 6, 0.02); }
+        .award-perk-list { list-style: none; text-align: left; font-size: 0.85rem; }
+        .award-perk-list li { margin-bottom: 0.5rem; display: flex; gap: 0.4rem; }
 
         .founder-frame {
-            aspect-ratio: 1/1;
-            background: linear-gradient(135deg, #1e1b4b, #0f172a);
-            border-radius: 30px;
-            border: 1px solid var(--border-glass);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            aspect-ratio: 1/1; background: #0f172a; border-radius: 20px;
+            border: 1px solid var(--border-glass); display: flex; align-items: center; justify-content: center;
         }
 
-        .founder-frame::before {
-            content: '';
-            position: absolute;
-            width: 150%;
-            height: 150%;
-            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
-        }
-
-        .founder-moniker {
-            color: var(--secondary);
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .founder-credentials-cluster {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .founder-credential-line {
-            font-size: 0.95rem;
-            color: var(--text-body);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .founder-credential-line i {
-            color: var(--primary);
-            width: 20px;
-        }
-
-        /* Speakers Grid Framework */
-        .speakers-dynamic-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-            gap: 2rem;
-        }
-
-        .speaker-profile-card {
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .speaker-avatar-frame {
-            width: 100%;
-            aspect-ratio: 1/1;
-            background: #0f172a;
-            border-radius: 14px;
-            margin-bottom: 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border: 1px solid var(--border-glass);
-        }
-
-        /* Automatic Carousel Scrolling Track */
-        .infinite-carousel-container {
-            overflow: hidden;
-            width: 100%;
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .infinite-carousel-track {
-            display: flex;
-            width: max-content;
-            gap: 3.5rem;
-            animation: infiniteScroll 25s linear infinite;
-        }
-
+        /* Infinite Slider System */
+        .infinite-carousel-container { overflow: hidden; width: 100%; padding: 1rem 0; }
+        .infinite-carousel-track { display: flex; width: max-content; gap: 2rem; animation: infiniteScroll 20s linear infinite; }
         .carousel-node-brand {
-            height: 60px;
-            width: 180px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-glass);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-display);
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
+            padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-glass);
+            border-radius: 10px; font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; white-space: nowrap;
         }
 
-        @keyframes infiniteScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        @keyframes infiniteScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* Reactive Registration Architecture */
-        .split-registration-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-        }
-
-        .interactive-form-shield {
-            padding: 4rem;
-        }
-
-        .form-row-twin {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        .form-node-group {
-            margin-bottom: 1.75rem;
-        }
-
-        .form-node-group label {
-            display: block;
-            font-family: var(--font-display);
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 0.6rem;
-            color: var(--text-pure);
-            letter-spacing: 0.03em;
-        }
-
+        /* Form Controls */
+        .form-row-twin { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-node-group { margin-bottom: 1.25rem; }
+        .form-node-group label { display: block; font-size: 0.8rem; margin-bottom: 0.4rem; color: var(--text-pure); }
         .form-node-input {
-            width: 100%;
-            padding: 1.1rem 1.25rem;
-            background: rgba(3, 7, 18, 0.5);
-            border: 1px solid var(--border-glass);
-            border-radius: 10px;
-            color: var(--text-pure);
-            font-family: var(--font-sans);
-            font-size: 0.95rem;
-            transition: var(--transition);
+            width: 100%; padding: 0.9rem 1.1rem; background: rgba(3, 7, 18, 0.5);
+            border: 1px solid var(--border-glass); border-radius: 8px; color: var(--text-pure); font-size: 0.9rem;
         }
 
-        .form-node-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
-        }
+        /* Footer Alignment Matrix */
+        footer { background: #02040a; border-top: 1px solid var(--border-glass); padding: 4rem 0 2.5rem 0; }
+        .footer-top-cluster { display: grid; grid-template-columns: 1.2fr repeat(3, 1fr); gap: 2.5rem; margin-bottom: 4rem; }
+        .footer-directory ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-directory a { color: var(--text-body); text-decoration: none; font-size: 0.85rem; }
+        .footer-manifesto-banner { font-family: var(--font-display); font-size: clamp(1.2rem, 2.5vw, 2rem); font-weight: 800; text-align: center; margin-bottom: 3rem; }
+        .footer-base-row { border-top: 1px solid var(--border-glass); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.8rem; }
 
-        .contact-hub-card {
-            padding: 4rem 3rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .hub-link-block {
-            display: flex;
-            gap: 1.25rem;
-        }
-
-        .hub-link-block i {
-            font-size: 1.4rem;
-            color: var(--secondary);
-            margin-top: 0.25rem;
-        }
-
-        .map-embed-placeholder {
-            height: 220px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.01), rgba(255,255,255,0.03));
-            border: 1px dashed var(--border-glass);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: auto;
-        }
-
-        /* High-End Enterprise Platform Footer */
-        footer {
-            background: #02040a;
-            border-top: 1px solid var(--border-glass);
-            padding: 6rem 0 3rem 0;
-        }
-
-        .footer-top-cluster {
-            display: grid;
-            grid-template-columns: 1.5fr repeat(3, 1fr);
-            gap: 4rem;
-            margin-bottom: 5rem;
-        }
-
-        .footer-brand-summary h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .footer-directory h4 {
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-pure);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .footer-directory ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.85rem;
-        }
-
-        .footer-directory a {
-            color: var(--text-body);
-            text-decoration: none;
-            font-size: 0.925rem;
-            transition: var(--transition);
-        }
-
-        .footer-directory a:hover {
-            color: var(--secondary);
-            padding-left: 4px;
-        }
-
-        .footer-manifesto-banner {
-            font-family: var(--font-display);
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 4rem;
-            letter-spacing: -0.01em;
-        }
-
-        .footer-base-row {
-            border-top: 1px solid var(--border-glass);
-            padding-top: 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-
-        .social-ring-deck {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-ring-node {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border-glass);
-            color: var(--text-body);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-ring-node:hover {
-            background: var(--primary);
-            color: #fff;
-            transform: translateY(-3px);
-        }
-
-        /* Dynamic System Overlay Lightbox */
-        .lightbox-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(2, 4, 10, 0.95);
-            backdrop-filter: blur(15px);
-            z-index: 2000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        .lightbox-content-shield {
-            max-width: 900px;
-            width: 100%;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-glass);
-            border-radius: 24px;
-            padding: 3.5rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .lightbox-close-trigger {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            color: var(--text-pure);
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .lightbox-close-trigger:hover { color: var(--secondary); }
-
-        /* Responsive Breakpoint Adaptations */
+        /* Responsive Breakpoints Adaptations (Mobile-First Optimization) */
         @media (max-width: 1024px) {
-            .organizer-grid, .partner-showcase-box, .host-grid-system, .split-registration-grid, .footer-top-cluster {
-                grid-template-columns: 1fr;
-                gap: 3.5rem;
-            }
+            .grid-split-2, .footer-top-cluster { grid-template-columns: 1fr; gap: 3rem; }
             .nav-menu { display: none; }
-            .mobile-toggle { display: block; }
-            .metric-counter-deck, .awards-tier-layout {
-                grid-template-columns: 1fr;
-            }
-            .timeline-spine-track::before { left: 2rem; }
-            .timeline-milestone-node { width: 100%; padding-left: 4rem; padding-right: 0; text-align: left !important; }
-            .timeline-milestone-node::after { left: calc(2rem - 7px) !important; right: auto !important; }
-            .founder-super-profile { grid-template-columns: 1fr; }
-            .founder-frame { max-width: 400px; margin: 0 auto; }
+            .mobile-toggle { display: flex; }
+            .metric-counter-deck, .awards-tier-layout { grid-template-columns: 1fr; }
+            .timeline-spine-track::before { left: 1rem; }
+            .timeline-milestone-node { width: 100%; padding-left: 2.5rem; padding-right: 0; text-align: left !important; }
+            .timeline-milestone-node::after { left: calc(1rem - 5px) !important; right: auto !important; }
+        }
+
+        @media (max-width: 550px) {
+            .goals-card-matrix, .form-row-twin { grid-template-columns: 1fr; }
+            .btn { width: 100%; }
+            .strip-flex { gap: 1rem; flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Global Background Elements -->
     <div class="bg-mesh"></div>
 
-    <!-- Header Block -->
+    <!-- Simplified Global Header HUD -->
     <header>
         <div class="container nav-wrapper">
-            <div class="cms-logos">
-                <div class="cms-logo-block"><img src="https://beulafy.com/src/PER.IMG/favicon.png"/></div>
-                <div class="cms-logo-block"><img src="https://beulafy.com/src/PER.IMG/favicon.png"/></div>
-            </div>
+            <a href="#" class="platform-logo">
+                FUTURE LEADERS <span>SUMMIT 2026</span>
+            </a>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#focus" class="nav-link">Focus Frameworks</a></li>
-                    <li><a href="#agenda" class="nav-link">Summit Timeline</a></li>
+                    <li><a href="#agenda" class="nav-link">Timeline</a></li>
                     <li><a href="#challenge" class="nav-link">Research Challenge</a></li>
-                    <li><a href="#host" class="nav-link">Leadership Profile</a></li>
-                    <li><a href="#register" class="nav-link">Secure Credentials</a></li>
+                    <li><a href="#host" class="nav-link">Leadership</a></li>
+                    <li><a href="#register" class="btn btn-primary" style="padding: 0.5rem 1.25rem;">Secure Access</a></li>
                 </ul>
             </nav>
             <div class="mobile-toggle" onclick="toggleMobileMenu()"><i class="fa-solid fa-bars-staggered"></i></div>
         </div>
     </header>
 
-    <!-- Hero Section Canvas -->
+    <!-- Affiliation Banner Block (Cleanly maps the 3 huge organizational entities outside nav layout) -->
+    <div class="institution-affiliation-strip" style="margin-top: 75px;">
+        <div class="container strip-flex">
+            <div class="strip-item"><i class="fa-solid fa-cube text-muted"></i> Organizer: <span>[TINATTI INITIATIVE]</span></div>
+            <div class="strip-item"><i class="fa-solid fa-code-branch text-muted"></i> Strategic Partner: <span>[BEULAFY]</span></div>
+            <div class="strip-item"><i class="fa-solid fa-building-columns text-muted"></i> Host Institution: <span>[FEDERAL POLYTECHNIC NASARAWA]</span></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
     <section id="hero">
         <div class="container text-center">
-            <div class="hero-badge"><i class="fa-solid fa-satellite-dish"></i> International Youth Leadership Summit 2026</div>
+            <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Global Youth Transformation Engine</div>
             <h1 class="hero-headline gradient-text">Digital Transformation,<br>Youth Reformation &<br>Leadership Summit 2026</h1>
             
             <div class="hero-theme-box">
@@ -1061,626 +623,362 @@
 
             <div class="hero-countdown-ticker">
                 <div class="ticker-time">COMING SEPTEMBER 2026</div>
-                <div class="ticker-label">Official Calendar Parameters To Be Disclosed</div>
+                <div class="ticker-label">Official Calendar Parameters To Be Announced</div>
             </div>
 
             <div class="btn-container">
-                <a href="#register" class="btn btn-primary">Register Interest <i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="#register" class="btn btn-primary">Register Interest <i class="fa-solid fa-arrow-right"></i></a>
                 <a href="#partner" class="btn btn-outline">Become a Partner</a>
                 <a href="#challenge" class="btn btn-gold">Research Challenge</a>
-                <a href="#register" class="btn btn-outline">Sponsor the Summit</a>
+                <a href="#register" class="btn btn-outline">Sponsor Summit</a>
             </div>
         </div>
     </section>
 
-    <!-- Organizer Section -->
+    <!-- Organizer Framework -->
     <section id="about" class="section">
         <div class="container">
-            <div class="organizer-grid">
+            <div class="grid-split-2">
                 <div>
                     <span class="section-tag">The Convener</span>
                     <h2 class="section-title">About Tinatti Initiative</h2>
-                    <p class="section-desc" style="margin-bottom: 2rem;">
-                        Tinatti Initiative is a premier, youth-focused development ecosystem committed to empowering modern global citizens through high-fidelity leadership execution, technology integration, innovation architectures, and structured ethical transformation modules.
+                    <p style="margin-bottom: 1.5rem; color: var(--text-body);">
+                        Tinatti Initiative is a progressive, youth-focused development ecosystem built to empower individuals through intensive leadership engineering, technology adoption models, actionable mentorship architecture, and structured ethical transformation modules.
                     </p>
-                    <div class="btn-container" style="justify-content: flex-start;">
-                        <a href="#register" class="btn btn-primary">Align With Our Mission</a>
-                    </div>
+                    <a href="#register" class="btn btn-outline" style="width: auto;">Align With Our Mission</a>
                 </div>
                 <div class="goals-card-matrix">
-                    <div class="interactive-goal-node">
-                        <i class="fa-solid fa-shield-halved node-icon"></i>
-                        <div class="node-title">Raise Ethical Leaders</div>
-                    </div>
-                    <div class="interactive-goal-node">
-                        <i class="fa-solid fa-seedling node-icon"></i>
-                        <div class="node-title">Positive Youth Development</div>
-                    </div>
-                    <div class="interactive-goal-node">
-                        <i class="fa-solid fa-fingerprint node-icon"></i>
-                        <div class="node-title">Responsible Digital Citizenship</div>
-                    </div>
-                    <div class="interactive-goal-node">
-                        <i class="fa-solid fa-cubes node-icon"></i>
-                        <div class="node-title">Support Entrepreneurship</div>
-                    </div>
-                    <div class="interactive-goal-node">
-                        <i class="fa-solid fa-chart-line node-icon"></i>
-                        <div class="node-title">Build Leadership Capacity</div>
-                    </div>
-                    <div class="interactive-goal-node">
-                        <i class="fa-solid fa-globe-africa node-icon"></i>
-                        <div class="node-title">Inspire Social Transformation</div>
-                    </div>
+                    <div class="interactive-goal-node"><i class="fa-solid fa-gavel node-icon"></i><div class="node-title">Raise Ethical Leaders</div></div>
+                    <div class="interactive-goal-node"><i class="fa-solid fa-users node-icon"></i><div class="node-title">Positive Youth Growth</div></div>
+                    <div class="interactive-goal-node"><i class="fa-solid fa-fingerprint node-icon"></i><div class="node-title">Digital Citizenship</div></div>
+                    <div class="interactive-goal-node"><i class="fa-solid fa-lightbulb node-icon"></i><div class="node-title">Support Startups</div></div>
+                    <div class="interactive-goal-node"><i class="fa-solid fa-arrow-trend-up node-icon"></i><div class="node-title">Capacity Scaling</div></div>
+                    <div class="interactive-goal-node"><i class="fa-solid fa-globe node-icon"></i><div class="node-title">Social Transformation</div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Strategic Partner Section -->
+    <!-- Strategic Alliance Section -->
     <section class="section" style="background: rgba(255,255,255,0.01);">
         <div class="container">
-            <div class="partner-showcase-box">
+            <div class="grid-split-2">
                 <div>
-                    <span class="section-tag">Strategic Architecture Alliance</span>
+                    <span class="section-tag">Engineering Infrastructure</span>
                     <h2 class="section-title">About Beulafy</h2>
-                    <p class="section-desc">
-                        Beulafy stands at the vanguard of digital product engineering and innovation systems, delivering enterprise technology solutions, intensive technical skills transformation, full-stack application deployment pipelines, and operational readiness frameworks optimized for the upcoming global workforce.
+                    <p style="color: var(--text-body);">
+                        Beulafy is a premium technology-driven platform focusing directly on digital architecture optimization, custom application building blocks, startup product development, technical skills transmission, and modern career trajectory readiness mapping.
                     </p>
                 </div>
                 <div>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-pure);">Core Focus Verticals</h3>
+                    <h3 style="font-size: 1.1rem; color: var(--text-pure); margin-bottom: 0.5rem;">Core Focus Columns</h3>
                     <div class="focus-pill-cluster">
-                        <div class="focus-pill"><i class="fa-solid fa-square-terminal"></i> Technology Solutions</div>
-                        <div class="focus-pill"><i class="fa-solid fa-graduation-cap"></i> Skills Development</div>
-                        <div class="focus-pill"><i class="fa-solid fa-rocket"></i> Entrepreneurship Support</div>
-                        <div class="focus-pill"><i class="fa-solid fa-bezier-curve"></i> Innovation Incubators</div>
-                        <div class="focus-pill"><i class="fa-solid fa-user-gear"></i> Career Strategy</div>
-                        <div class="focus-pill"><i class="fa-solid fa-cpu"></i> Future Workforce Readiness</div>
+                        <div class="focus-pill"><i class="fa-solid fa-layer-group"></i> Tech Solutions</div>
+                        <div class="focus-pill"><i class="fa-solid fa-terminal"></i> Digital Skills</div>
+                        <div class="focus-pill"><i class="fa-solid fa-rocket"></i> Entrepreneurship</div>
+                        <div class="focus-pill"><i class="fa-solid fa-seedling"></i> Innovation Support</div>
+                        <div class="focus-pill"><i class="fa-solid fa-briefcase"></i> Career Growth</div>
+                        <div class="focus-pill"><i class="fa-solid fa-user-gear"></i> Future Workforce</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Host Department Section -->
+    <!-- Institutional Host Section -->
     <section class="section">
         <div class="container">
-            <div class="host-grid-system">
+            <div class="grid-split-2">
                 <div>
-                    <span class="section-tag">Summit Institutional Host</span>
-                    <h2 class="section-title" style="font-size: 2.5rem;">Crime Management in the Digital Era</h2>
-                    <p style="color: var(--secondary); font-family: var(--font-display); font-weight: 600; margin-bottom: 1.5rem;">Department of Crime Management, Federal Polytechnic Nasarawa</p>
-                    <p class="section-desc">
-                        Modern crime management extends far beyond physical boundaries into highly sophisticated digital perimeters. The sudden expansion of adversarial system deployments, cryptographic exploits, automated fraud networks, and identity compromises necessitates a radical update to structural enforcement methods. 
+                    <span class="section-tag">Institutional Host Axis</span>
+                    <h2 class="section-title" style="font-size: clamp(1.6rem, 3.5vw, 2.5rem);">Crime Management in the Digital Era</h2>
+                    <p style="color: var(--secondary); font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem;">Department of Crime Management, Federal Polytechnic Nasarawa</p>
+                    <p style="color: var(--text-body);">
+                        Modern tracking strategy scales far beyond physical parameters. The emergence of automated network fraud, asymmetric systems compromise, and algorithmic operational exploitation necessitates that upcoming security operators be armed with modern cybersecurity, system forensics, and ethical data management principles.
                     </p>
                 </div>
                 <div>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; padding-left: 1.25rem;">Student Optimization Parameters</h3>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; padding-left: 1rem;">Student Development Targets</h3>
                     <div class="benefit-strip-item">
                         <div class="strip-indicator">01</div>
-                        <div>
-                            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Cybercrime Prevention Architectures</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Acquiring operational intelligence regarding structural modern threat threat matrices.</p>
-                        </div>
+                        <div><h4 style="font-size: 1rem;">Cybercrime Intelligence Modeling</h4></div>
                     </div>
                     <div class="benefit-strip-item">
                         <div class="strip-indicator">02</div>
-                        <div>
-                            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Digital Forensic Investigation Tactics</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Exposure to data logging environments, algorithmic tracing, and vector tracking methods.</p>
-                        </div>
+                        <div><h4 style="font-size: 1rem;">Digital System Forensic Training</h4></div>
                     </div>
                     <div class="benefit-strip-item">
                         <div class="strip-indicator">03</div>
-                        <div>
-                            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Ethical Command Frameworks</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Integrating corporate accountability mechanisms with high-integrity leadership execution.</p>
-                        </div>
+                        <div><h4 style="font-size: 1rem;">Ethical Governance Leadership</h4></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Official Summit Flyer Section -->
+    <!-- Marketing Asset Workspace -->
     <section class="section" style="background: rgba(139, 92, 246, 0.02);">
         <div class="container text-center">
-            <span class="section-tag">Media Asset Hub</span>
+            <span class="section-tag">Media Vault</span>
             <h2 class="section-title">Official Summit Flyer</h2>
-            <p class="section-desc" style="margin-bottom: 4rem;">Access and distribute information artifacts regarding the 2026 digital convergence.</p>
             
             <div class="flyer-viewport-wrapper">
                 <div class="flyer-frame-canvas">
                     <div class="placeholder-artwork-layer">
-                        <i class="fa-solid fa-photo-film"></i>
+                        <i class="fa-solid fa-images"></i>
                         <h3>[ SUMMIT FLYER IMAGE PLACEHOLDER ]</h3>
-                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Interactive Asset Interface Available Post-Deployment</p>
                     </div>
                     <div class="flyer-toolbar-actions">
-                        <button class="btn btn-primary" onclick="openLightbox('Summit Flyer Workspace Preview')">Full-Screen Preview</button>
-                        <button class="btn btn-outline" onclick="alert('Downloading high-resolution marketing brochure structure...')">Download Flyer</button>
-                        <button class="btn btn-outline" onclick="alert('Asset URL copied to host sharing clipboard.')"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                        <button class="btn btn-primary" onclick="alert('Launching Fullscreen View Model Grid...')">Preview Framework</button>
+                        <button class="btn btn-outline" onclick="alert('Downloading high-res brochure packaging structure...')">Download Asset</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- High-Impact About Strategic Breakdown -->
+    <!-- Comprehensive Movement Overview Grid -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">The Movement</span>
-                <h2 class="section-title">The Digital Transformation, Youth Reformation & Leadership Summit 2026</h2>
-                <p class="section-desc">
-                    A multi-tiered platform designed to build an elite ecosystem of technical practitioners, ethical directors, and enterprise visionaries across emerging African markets.
-                </p>
+                <span class="section-tag">Summit Framework Strategy</span>
+                <h2 class="section-title">Beyond Survival Execution Model</h2>
+                <p>An international tech-focused youth assembly mapped to identify, nurture, and standardize tomorrow's market-ready corporate leaders.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 6rem;">
-                <div class="glass-card" style="padding: 3.5rem; border-left: 4px solid var(--primary);">
-                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;"><i class="fa-solid fa-compass-drafting" style="color:var(--primary); margin-right: 0.75rem;"></i> Strategic Vision</h3>
-                    <p style="font-size: 1.05rem;">To raise a generation of ethical, skilled, innovative, and future-ready leaders capable of driving sustainable transformation within their communities and beyond.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+                <div class="glass-card" style="padding: 2rem; border-left: 3px solid var(--primary);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-eye" style="color:var(--primary); margin-right: 0.5rem;"></i> Strategic Vision</h3>
+                    <p style="font-size: 0.9rem;">To raise a generation of ethical, skilled, innovative, and future-ready leaders capable of driving sustainable transformation within their communities and beyond.</p>
                 </div>
-                <div class="glass-card" style="padding: 3.5rem; border-left: 4px solid var(--secondary);">
-                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;"><i class="fa-solid fa-flag-usa" style="color:var(--secondary); margin-right: 0.75rem;"></i> Core Mission</h3>
-                    <p style="font-size: 1.05rem;">To empower young people through leadership development, technology education, innovation, entrepreneurship, mentorship, and cybersecurity awareness while promoting responsible citizenship and national development.</p>
+                <div class="glass-card" style="padding: 2rem; border-left: 3px solid var(--secondary);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-bullseye" style="color:var(--secondary); margin-right: 0.5rem;"></i> Core Mission</h3>
+                    <p style="font-size: 0.9rem;">To empower young people through leadership development, technology education, innovation, entrepreneurship, mentorship, and cybersecurity awareness while promoting responsible citizenship and national development.</p>
                 </div>
             </div>
 
-            <!-- Focus Areas Grid -->
+            <!-- Verticals Matrix -->
             <div id="focus">
-                <h3 class="text-center" style="font-size: 1.8rem; margin-bottom: 3.5rem;">Ecosystem Core Verticals</h3>
                 <div class="vertical-focus-grid">
                     <div class="glass-card premium-focus-box">
-                        <i class="fa-solid fa-server" style="color: var(--primary); font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-network-wired" style="color: var(--primary);"></i>
                         <h3>Digital Transformation</h3>
                         <p>Transitioning architecture models to agile cloud systems across standard workflows.</p>
                     </div>
                     <div class="glass-card premium-focus-box">
-                        <i class="fa-solid fa-user-secret" style="color: var(--secondary); font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-user-shield" style="color: var(--secondary);"></i>
                         <h3>Cybersecurity Awareness</h3>
                         <p>Mitigating advanced attack vectors and establishing localized enterprise telemetry defense.</p>
                     </div>
                     <div class="glass-card premium-focus-box">
-                        <i class="fa-solid fa-arrows-to-circle" style="color: var(--primary); font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-person-circle-check" style="color: var(--primary);"></i>
                         <h3>Youth Reformation</h3>
                         <p>Optimizing talent focus structures away from system disruption toward developmental progress.</p>
                     </div>
                     <div class="glass-card premium-focus-box">
-                        <i class="fa-solid fa-building-shield" style="color: var(--secondary); font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-building-columns" style="color: var(--secondary);"></i>
                         <h3>Ethical Leadership</h3>
                         <p>Implementing reliable transparency models into organizational governance parameters.</p>
                     </div>
-                    <div class="glass-card premium-focus-box">
-                        <i class="fa-solid fa-lightbulb" style="color: var(--primary); font-size: 1.5rem;"></i>
-                        <h3>Innovation & Entrepreneurship</h3>
-                        <p>Transforming minimum viable designs into high-velocity technology corporate entities.</p>
-                    </div>
-                    <div class="glass-card premium-focus-box">
-                        <i class="fa-solid fa-brain" style="color: var(--secondary); font-size: 1.5rem;"></i>
-                        <h3>Artificial Intelligence</h3>
-                        <p>Leveraging deep learning architectures safely to amplify production output metrics.</p>
-                    </div>
-                    <div class="glass-card premium-focus-box">
-                        <i class="fa-solid fa-laptop-code" style="color: var(--primary); font-size: 1.5rem;"></i>
-                        <h3>Digital Skills Development</h3>
-                        <p>High-end capability building covering engineering paradigms and complex platform structures.</p>
-                    </div>
-                    <div class="glass-card premium-focus-box">
-                        <i class="fa-solid fa-user-tie" style="color: var(--secondary); font-size: 1.5rem;"></i>
-                        <h3>Career Development</h3>
-                        <p>Building effective paths to achieve optimal placement in competitive job markets.</p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Attend Strategy Canvas With Metrics -->
-    <section class="section" style="background: rgba(2,4,10,0.6);">
+    <!-- Metrics Sub-Layer Grid -->
+    <section class="section" style="background: rgba(2,4,10,0.4);">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Value Proposition</span>
-                <h2 class="section-title">What Students & Visionaries Will Gain</h2>
-                <p class="section-desc">Measurable developmental milestones built into the execution of the conference layout architecture.</p>
-            </div>
-
             <div class="metric-counter-deck">
-                <div class="glass-card metric-counter-node">
-                    <div class="counter-numeric">100%</div>
-                    <div style="font-size: 0.95rem; color: var(--text-body);">Actionable Competency Tracks</div>
-                </div>
-                <div class="glass-card metric-counter-node">
-                    <div class="counter-numeric">12+</div>
-                    <div style="font-size: 0.95rem; color: var(--text-body);">Industry Specialization Focuses</div>
-                </div>
-                <div class="glass-card metric-counter-node">
-                    <div class="counter-numeric">1K+</div>
-                    <div style="font-size: 0.95rem; color: var(--text-body);">Future-Ready Innovators Mapped</div>
-                </div>
-                <div class="glass-card metric-counter-node">
-                    <div class="counter-numeric">0</div>
-                    <div style="font-size: 0.95rem; color: var(--text-body);">Compromise on Ethical Standards</div>
-                </div>
-            </div>
-
-            <div class="vertical-focus-grid">
-                <div class="glass-card style" style="padding: 2rem; background: rgba(255,255,255,0.015);">
-                    <h4 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-shield" style="color:var(--secondary); margin-right: 0.5rem;"></i> Cybersecurity Resiliency</h4>
-                </div>
-                <div class="glass-card style" style="padding: 2rem; background: rgba(255,255,255,0.015);">
-                    <h4 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-microchip" style="color:var(--primary); margin-right: 0.5rem;"></i> Advanced Systems Exposure</h4>
-                </div>
-                <div class="glass-card style" style="padding: 2rem; background: rgba(255,255,255,0.015);">
-                    <h4 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-award" style="color:var(--secondary); margin-right: 0.5rem;"></i> Recognized Accreditation</h4>
-                </div>
-                <div class="glass-card style" style="padding: 2rem; background: rgba(255,255,255,0.015);">
-                    <h4 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-network-wired" style="color:var(--primary); margin-right: 0.5rem;"></i> High-Tier Strategic Alliances</h4>
-                </div>
+                <div class="glass-card metric-counter-node"><div class="counter-numeric">100%</div><div style="font-size: 0.85rem;">Actionable Analytics</div></div>
+                <div class="glass-card metric-counter-node"><div class="counter-numeric">15+</div><div style="font-size: 0.85rem;">Industry Synergies</div></div>
+                <div class="glass-card metric-counter-node"><div class="counter-numeric">1K+</div><div style="font-size: 0.85rem;">Leaders Catalogued</div></div>
+                <div class="glass-card metric-counter-node"><div class="counter-numeric">0</div><div style="font-size: 0.85rem;">Ethical Compromises</div></div>
             </div>
         </div>
     </section>
 
-    <!-- Summit Featured Timeline Schedule -->
+    <!-- Operational Timeline -->
     <section id="agenda" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">High-End Program Grid</span>
-                <h2 class="section-title">Featured Activities Roadmap</h2>
-                <p class="section-desc">The structured operational sequencing of the 2026 Summit Event Ecosystem.</p>
+                <span class="section-tag">Agenda Sequence</span>
+                <h2 class="section-title">Featured Event Schedule</h2>
             </div>
 
             <div class="timeline-spine-track">
                 <div class="timeline-milestone-node">
                     <div class="glass-card timeline-node-inner">
-                        <h3>01. Opening Ceremony & Corporate Protocols</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Introduction of institutional leaders, sovereign stakeholders, and foundational conference directives.</p>
+                        <h3>01. Opening Protocols</h3>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Sovereign stakeholders alignment and summit strategic intent validation.</p>
                     </div>
                 </div>
                 <div class="timeline-milestone-node">
                     <div class="glass-card timeline-node-inner">
-                        <h3>02. High-Velocity Keynote Matrix Presentations</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Analytical perspectives delivered by technology transformation executives.</p>
+                        <h3>02. Keynote Frameworks</h3>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Analysis from digital industry leaders and ecosystem builders.</p>
                     </div>
                 </div>
                 <div class="timeline-milestone-node">
                     <div class="glass-card timeline-node-inner">
-                        <h3>03. Leadership Masterclass Deep Dives</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Immersive systems validation training emphasizing ethical governance mechanics.</p>
-                    </div>
-                </div>
-                <div class="timeline-milestone-node">
-                    <div class="glass-card timeline-node-inner">
-                        <h3>04. Cybersecurity Threat Awareness Tracks</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Live labs tracing adversarial tactics, digital fraud chains, and structural defense modeling.</p>
-                    </div>
-                </div>
-                <div class="timeline-milestone-node">
-                    <div class="glass-card timeline-node-inner">
-                        <h3>05. Innovation Showcases & Product Testing</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Live deployment analysis of engineering projects designed by young developers.</p>
-                    </div>
-                </div>
-                <div class="timeline-milestone-node">
-                    <div class="glass-card timeline-node-inner">
-                        <h3>06. Executive Panel Debates & Action Blueprints</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Interactive strategy synchronization involving regulatory bodies and innovation hubs.</p>
+                        <h3>03. Cyber Intelligence Labs</h3>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Live analysis of threat mitigation techniques and network auditing procedures.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Future Leaders Research & Innovation Challenge 2026 -->
-    <section id="challenge" class="section" style="background: radial-gradient(circle at 10% 90%, rgba(139,92,246,0.06) 0%, transparent 50%);">
+    <!-- Research Challenge Arena -->
+    <section id="challenge" class="section">
         <div class="container">
             <div class="challenge-master-shield text-center">
-                <span class="section-tag" style="color: var(--secondary);">Global Competition Stage</span>
-                <h2 class="section-title">Future Leaders Research & Innovation Challenge 2026</h2>
+                <span class="section-tag">Elite Competition Stage</span>
+                <h2 class="section-title">Research & Innovation Challenge 2026</h2>
                 
-                <div style="max-width: 850px; margin: 0 auto 3rem auto; border: 1px dashed rgba(217,119,6,0.3); padding: 2rem; border-radius: 16px; background: rgba(3,7,18,0.4);">
-                    <h4 style="color: var(--secondary); font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Assigned Analytical Framework Topic:</h4>
-                    <p style="font-size: 1.35rem; font-weight: 600; color: #fff; line-height: 1.4;">
+                <div style="max-width: 700px; margin: 0 auto 2rem auto; border: 1px dashed rgba(217,119,6,0.3); padding: 1.5rem; border-radius: 12px; background: rgba(3,7,18,0.5);">
+                    <h4 style="color: var(--secondary); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 0.5rem;">Assigned Frame Parameter:</h4>
+                    <p style="font-size: 1.15rem; font-weight: 600; color: #fff;">
                         "Innovative Strategies for Combating Cybercrime and Redirecting Youth Potential Towards National Development"
                     </p>
-                    <div style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-body);">
-                        Final Submission Envelope Lock Date: <strong style="color: #fff;">30 August 2026</strong>
-                    </div>
+                    <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Envelope Closes: 30 August 2026</p>
                 </div>
 
-                <!-- Award Cards Presentation Layer -->
-                <h3 style="font-size: 1.5rem; margin-top: 4rem;">Distinguished Recognition Matrix</h3>
                 <div class="awards-tier-layout">
                     <div class="glass-card award-tier-card grand-prize">
-                        <i class="fa-solid fa-trophy" style="color:var(--secondary); font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                        <h4>Grand Prize Winner</h4>
+                        <h4>Grand Prize</h4>
                         <ul class="award-perk-list">
-                            <li><i class="fa-solid fa-circle-check"></i> Academic Scholarship Support</li>
-                            <li><i class="fa-solid fa-circle-check"></i> 1-Year Elite Mentorship Program</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Priority Tech Skills Training Track</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Executive Excellence Certificate</li>
+                            <li><i class="fa-solid fa-check text-secondary"></i> Partial Scholarship Support</li>
+                            <li><i class="fa-solid fa-check text-secondary"></i> 1-Year Elite Mentorship Program</li>
                         </ul>
                     </div>
                     <div class="glass-card award-tier-card">
-                        <i class="fa-solid fa-award" style="color:var(--text-body); font-size: 2.5rem; margin-bottom: 1rem;"></i>
-                        <h4>First Runner-Up</h4>
+                        <h4>Runner-Up</h4>
                         <ul class="award-perk-list">
-                            <li><i class="fa-solid fa-circle-check"></i> Academic Scholarship Support</li>
-                            <li><i class="fa-solid fa-circle-check"></i> 6-Month Mentorship Alignment</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Recognition Commendation</li>
+                            <li><i class="fa-solid fa-check text-secondary"></i> 6-Month System Mentorship</li>
                         </ul>
                     </div>
                     <div class="glass-card award-tier-card">
-                        <i class="fa-solid fa-medal" style="color:#cd7f32; font-size: 2.5rem; margin-bottom: 1rem;"></i>
                         <h4>Second Runner-Up</h4>
                         <ul class="award-perk-list">
-                            <li><i class="fa-solid fa-circle-check"></i> 6-Month Structured Mentorship</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Official Merit Certification</li>
+                            <li><i class="fa-solid fa-check text-secondary"></i> Official Merit Credentials</li>
                         </ul>
                     </div>
                 </div>
-
-                <p class="section-desc" style="max-width: 800px; margin: 0 auto 3.5rem auto; font-size: 1rem; font-style: italic;">
-                    <i class="fa-solid fa-scroll"></i> <strong>Publication Opportunity:</strong> Selected outstanding submissions may be featured in future Tinatti publications, innovation reports, leadership projects, youth development initiatives, and digital transformation programmes.
-                </p>
-
-                <!-- Call for Papers Showcase Subcard -->
-                <div class="glass-card" style="max-width:650px; margin: 0 auto; padding: 2.5rem; border: 1px solid var(--border-glass);">
-                    <div style="background: rgba(0,0,0,0.3); height: 140px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); margin-bottom: 1.5rem; border: 1px dashed var(--border-glass);">
-                        [ RESEARCH CHALLENGE / CALL FOR PAPERS FLYER PLACEHOLDER ]
-                    </div>
-                    <div style="display:flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <button class="btn btn-gold btn-sm" onclick="openLightbox('Research Challenge Call For Papers Structure')">Preview Framework</button>
-                        <button class="btn btn-outline btn-sm" onclick="alert('Downloading Challenge Guide PDF...')">Download Guidelines</button>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Founder Spotlight Section -->
+    <!-- Host Blueprint Profile Map -->
     <section id="host" class="section">
         <div class="container">
-            <div class="glass-card founder-super-profile" style="padding: 5rem;">
+            <div class="glass-card grid-split-2" style="padding: clamp(1.5rem, 4vw, 3.5rem);">
                 <div class="founder-frame">
-                    <div style="z-index: 1; text-align: center; padding: 1.5rem;">
-                        <i class="fa-solid fa-user-gear" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                        <h3>[ HOST IMAGE PLACEHOLDER ]</h3>
-                    </div>
+                    <h3>[ HOST IMAGE PLACEHOLDER ]</h3>
                 </div>
                 <div>
-                    <div class="founder-moniker">Summit General Host Profile</div>
-                    <h2 style="font-size: 3rem; margin-bottom: 0.5rem; line-height: 1.1;">Andrew Moses</h2>
-                    <p style="font-size: 1.1rem; color: var(--secondary); font-family: var(--font-display); font-weight: 500;">
-                        Popularly Known As: <strong>Alhemdrew Davenchi</strong>
+                    <span class="section-tag">Summit Convening Director</span>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 0.25rem;">Andrew Moses</h2>
+                    <p style="color: var(--secondary); font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem;">Alhemdrew Davenchi</p>
+                    
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-body); margin-bottom: 1.5rem;">
+                        Andrew Moses is a technology innovator, educator, cybersecurity advocate, and youth development leader committed to empowering individuals through technology, leadership, innovation, mentorship, and sustainable development initiatives. He handles high-integrity architecture development as a Certified Cybersecurity Educator Professional (CCEP).
                     </p>
-
-                    <div class="founder-credentials-cluster">
-                        <div class="founder-credential-line"><i class="fa-solid fa-square-envelope"></i> Founder, Beulafy</div>
-                        <div class="founder-credential-line"><i class="fa-solid fa-shield-halved"></i> Founder & Director, Tinatti Initiative</div>
-                        <div class="founder-credential-line"><i class="fa-solid fa-code"></i> Web Application Developer</div>
-                        <div class="founder-credential-line"><i class="fa-solid fa-network-wired"></i> Cybersecurity Practitioner</div>
-                        <div class="founder-credential-line"><i class="fa-solid fa-user-shield"></i> Certified Cybersecurity Educator Professional (CCEP)</div>
+                    
+                    <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.85rem; margin-bottom:1.5rem; color: var(--text-muted);">
+                        <div><i class="fa-solid fa-shield text-primary"></i> Founder & Director, Tinatti Initiative</div>
+                        <div><i class="fa-solid fa-laptop-code text-primary"></i> Web Application Developer & CCEP Educator</div>
                     </div>
 
-                    <p class="section-desc" style="font-size: 1.05rem; text-align: left; margin-bottom: 2rem;">
-                        Andrew Moses is a technology innovator, educator, cybersecurity advocate, and youth development leader committed to empowering individuals through technology, leadership, innovation, mentorship, and sustainable development initiatives.
-                    </p>
-
-                    <div class="social-ring-deck">
-                        <a href="#" class="social-ring-node"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="social-ring-node"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" class="social-ring-node"><i class="fa-brands fa-x-twitter"></i></a>
+                    <div style="display:flex; gap:0.75rem;">
+                        <a href="#" class="btn btn-outline" style="padding:0.5rem 1rem;"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline" style="padding:0.5rem 1rem;"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Speakers Track -->
-    <section class="section" style="background: rgba(139,92,246,0.01);">
+    <!-- Continuous Brand Showcase Track -->
+    <section id="partner" class="section" style="padding: 3rem 0; border-top:1px solid var(--border-glass); border-bottom:1px solid var(--border-glass);">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Faculty Panel</span>
-                <h2 class="section-title">The Speakers Lineup</h2>
-                <p class="section-desc">Elite programmatic builders, public sector policy heads, and structural educators.</p>
-            </div>
-
-            <div class="speakers-dynamic-grid">
-                <!-- Programmatic Template Loop Slots -->
-                <div class="glass-card speaker-profile-card">
-                    <div class="speaker-avatar-frame">[ PHOTO ASSET PLACEHOLDER ]</div>
-                    <h4>Faculty Slot 01</h4>
-                    <p style="color: var(--secondary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">To Be Appointed</p>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.7rem 0 1.2rem 0;">Dynamic registry configuration profile available in administrative interface mapping controls.</p>
-                    <div class="social-ring-deck" style="justify-content: center;">
-                        <a href="#" style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="glass-card speaker-profile-card">
-                    <div class="speaker-avatar-frame">[ PHOTO ASSET PLACEHOLDER ]</div>
-                    <h4>Faculty Slot 02</h4>
-                    <p style="color: var(--secondary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">To Be Appointed</p>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.7rem 0 1.2rem 0;">Dynamic registry configuration profile available in administrative interface mapping controls.</p>
-                    <div class="social-ring-deck" style="justify-content: center;">
-                        <a href="#" style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="glass-card speaker-profile-card">
-                    <div class="speaker-avatar-frame">[ PHOTO ASSET PLACEHOLDER ]</div>
-                    <h4>Faculty Slot 03</h4>
-                    <p style="color: var(--secondary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">To Be Appointed</p>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.7rem 0 1.2rem 0;">Dynamic registry configuration profile available in administrative interface mapping controls.</p>
-                    <div class="social-ring-deck" style="justify-content: center;">
-                        <a href="#" style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="glass-card speaker-profile-card">
-                    <div class="speaker-avatar-frame">[ PHOTO ASSET PLACEHOLDER ]</div>
-                    <h4>Faculty Slot 04</h4>
-                    <p style="color: var(--secondary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">To Be Appointed</p>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.7rem 0 1.2rem 0;">Dynamic registry configuration profile available in administrative interface mapping controls.</p>
-                    <div class="social-ring-deck" style="justify-content: center;">
-                        <a href="#" style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Endless Scrolling Logo Array Alignment -->
-    <section id="partner" class="section" style="border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); padding: 5rem 0;">
-        <div class="container text-center">
-            <h4 style="font-family: var(--font-display); font-size: 1.1rem; color: var(--text-body); margin-bottom: 2.5rem; text-transform: uppercase; letter-spacing: 0.1em;">Allied System Ecosystem Networks</h4>
-            
             <div class="infinite-carousel-container">
                 <div class="infinite-carousel-track">
-                    <div class="carousel-node-brand">Sponsors Matrix</div>
-                    <div class="carousel-node-brand">Technology Companies</div>
+                    <div class="carousel-node-brand">Ecosystem Sponsors</div>
+                    <div class="carousel-node-brand">Technology Corporations</div>
                     <div class="carousel-node-brand">Government Agencies</div>
-                    <div class="carousel-node-brand">NGO Frameworks</div>
-                    <div class="carousel-node-brand">Educational Institutions</div>
-                    <div class="carousel-node-brand">Development Orgs</div>
-                    <div class="carousel-node-brand">Innovation Hubs</div>
-                    <!-- Cloned Elements for Continuous Presentation Track Loop -->
-                    <div class="carousel-node-brand">Sponsors Matrix</div>
-                    <div class="carousel-node-brand">Technology Companies</div>
+                    <div class="carousel-node-brand">NGO Stakeholders</div>
+                    <div class="carousel-node-brand">Development Hubs</div>
+                    <!-- Duplicate Buffer Loop Layers -->
+                    <div class="carousel-node-brand">Ecosystem Sponsors</div>
+                    <div class="carousel-node-brand">Technology Corporations</div>
                     <div class="carousel-node-brand">Government Agencies</div>
-                    <div class="carousel-node-brand">NGO Frameworks</div>
-                    <div class="carousel-node-brand">Educational Institutions</div>
-                    <div class="carousel-node-brand">Development Orgs</div>
-                    <div class="carousel-node-brand">Innovation Hubs</div>
-                </div>
-            </div>
-
-            <!-- Strategic Impact Metric Definitions -->
-            <div style="margin-top: 6rem;">
-                <span class="section-tag">Corporate Stewardship Matrix</span>
-                <h2 class="section-title">Together We Build the Future</h2>
-                <div class="focus-pill-cluster" style="justify-content: center; max-width: 900px; margin: 2rem auto 4rem auto;">
-                    <div class="focus-pill" style="padding: 1rem 2rem;"><i class="fa-solid fa-circle-nodes" style="color:var(--secondary);"></i> Youth Development Advocacy</div>
-                    <div class="focus-pill" style="padding: 1rem 2rem;"><i class="fa-solid fa-code-fork" style="color:var(--primary);"></i> Technology Education Deployment</div>
-                    <div class="focus-pill" style="padding: 1rem 2rem;"><i class="fa-solid fa-universal-access" style="color:var(--secondary);"></i> Structural Leadership Initiatives</div>
-                    <div class="focus-pill" style="padding: 1rem 2rem;"><i class="fa-solid fa-shield-virus" style="color:var(--primary);"></i> Cyber Incident Defense Mapping</div>
-                    <div class="focus-pill" style="padding: 1rem 2rem;"><i class="fa-solid fa-flag-checkered" style="color:var(--secondary);"></i> Sustained National Progress</div>
-                </div>
-                
-                <div class="glass-card" style="max-width: 800px; margin: 0 auto; padding: 4rem 2rem;">
-                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Available Engagement Framework Categories</h3>
-                    <p class="section-desc" style="font-size: 1rem; margin-bottom: 2.5rem;">Strategic Partnerships • Sponsorship Opportunities • Exhibition Opportunities • Media Partnerships • Training Partnerships • Community Partnerships</p>
-                    <a href="#register" class="btn btn-gold">Initiate Partnership Affiliation</a>
+                    <div class="carousel-node-brand">NGO Stakeholders</div>
+                    <div class="carousel-node-brand">Development Hubs</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Execution Registration Control Entry Grid -->
+    <!-- Registration Dynamic Control Entry Grid -->
     <section id="register" class="section">
         <div class="container">
-            <div class="split-registration-grid">
-                <div class="glass-card interactive-form-shield">
-                    <span class="section-tag">Access Control</span>
-                    <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Secure Your Registration Credentials</h2>
-                    <p style="color: var(--text-body); margin-bottom: 3rem; font-size: 0.95rem;">Complete the data matrix configuration profile layer below to establish entry interest parameters.</p>
+            <div class="grid-split-2">
+                <div class="glass-card" style="padding: clamp(1.5rem, 4vw, 3rem);">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Secure Access Protocol</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">Cache entry credential requests inside the database system tracking array.</p>
                     
-                    <form onsubmit="processFormAnalytics(event)">
+                    <form onsubmit="event.preventDefault(); alert('Telemetry Handshake Accepted: Registration Form Processed Successfully.');">
                         <div class="form-node-group">
                             <label>Full Name</label>
-                            <input type="text" class="form-node-input" placeholder="Surname First Name" required>
+                            <input type="text" class="form-node-input" required placeholder="Surname First Name">
                         </div>
                         <div class="form-row-twin">
                             <div class="form-node-group">
                                 <label>Department Workspace</label>
-                                <input type="text" class="form-node-input" placeholder="e.g. Crime Management" required>
+                                <input type="text" class="form-node-input" required placeholder="e.g. Crime Management">
                             </div>
                             <div class="form-node-group">
-                                <label>Host Institution Allocation</label>
-                                <input type="text" class="form-node-input" placeholder="University / Polytechnic / Organization" required>
-                            </div>
-                        </div>
-                        <div class="form-row-twin">
-                            <div class="form-node-group">
-                                <label>Academic Level / Rank</label>
-                                <input type="text" class="form-node-input" placeholder="e.g. 100L / Executive Specialist">
-                            </div>
-                            <div class="form-node-group">
-                                <label>Core Structural Area of Interest</label>
-                                <select class="form-node-input" style="background: var(--bg-base);">
-                                    <option>Digital Transformation Systems</option>
-                                    <option>Cybersecurity Defense Arrays</option>
-                                    <option>Ethical Leadership Frameworks</option>
-                                    <option>Innovation Challenge Submission</option>
-                                </select>
+                                <label>Host Institution</label>
+                                <input type="text" class="form-node-input" required placeholder="University / Polytechnic">
                             </div>
                         </div>
                         <div class="form-row-twin">
                             <div class="form-node-group">
                                 <label>Secure Email Address</label>
-                                <input type="email" class="form-node-input" placeholder="identity@domain.com" required>
+                                <input type="email" class="form-node-input" required placeholder="identity@domain.com">
                             </div>
                             <div class="form-node-group">
                                 <label>Mobile Telecom Line</label>
-                                <input type="tel" class="form-node-input" placeholder="+234 Matrix" required>
+                                <input type="tel" class="form-node-input" required placeholder="+234 Terminal">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1.5rem; border-radius: 12px;">Transmit Credential Registration Form</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Transmit Access Request Profile</button>
                     </form>
                 </div>
 
-                <!-- Contact Grid Panel Area -->
-                <div class="glass-card contact-hub-card">
+                <div class="glass-card" style="padding: clamp(1.5rem, 4vw, 3rem); display:flex; flex-direction:column; gap:1.5rem;">
                     <div>
-                        <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Communications Desk</h3>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Direct systems interface for administrative telemetry synchronization.</p>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.25rem;">Communications Desk</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Direct systems routing interfaces.</p>
                     </div>
-
-                    <div class="hub-link-block">
-                        <i class="fa-solid fa-phone-nodes"></i>
-                        <div>
-                            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Voice Terminal Line</div>
-                            <strong style="color:#fff;">[Insert Number]</strong>
-                        </div>
-                    </div>
-                    <div class="hub-link-block">
-                        <i class="fa-solid fa-envelope-open-text"></i>
-                        <div>
-                            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Secure Enterprise Routing Email</div>
-                            <strong style="color:#fff;">[Insert Email]</strong>
-                        </div>
-                    </div>
-                    <div class="hub-link-block">
-                        <i class="fa-solid fa-network-wired"></i>
-                        <div>
-                            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Digital Headquarters Registry Domain</div>
-                            <strong style="color:#fff;">[Insert Website]</strong>
-                        </div>
-                    </div>
-                    <div class="hub-link-block">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                        <div>
-                            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Sovereign Physical Infrastructure Destination</div>
-                            <strong style="color:#fff;">Federal Polytechnic Nasarawa, Nigeria</strong>
-                        </div>
-                    </div>
-
-                    <div class="map-embed-placeholder">
-                        <i class="fa-solid fa-earth-africa" style="margin-right: 0.5rem; color: var(--primary);"></i> Google Maps System API Frame Alignment Anchor
+                    <div style="font-size:0.9rem; display:flex; flex-direction:column; gap:1rem;">
+                        <div><i class="fa-solid fa-phone text-secondary" style="margin-right:0.5rem;"></i> Voice: [Insert Number]</div>
+                        <div><i class="fa-solid fa-envelope text-secondary" style="margin-right:0.5rem;"></i> Mail: [Insert Email]</div>
+                        <div><i class="fa-solid fa-location-dot text-secondary" style="margin-right:0.5rem;"></i> Destination: FedPoly Nasarawa, Nigeria</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- High-End Platform Footer Grid System -->
+    <!-- Global Corporate Footer System -->
     <footer>
         <div class="container">
             <div class="footer-top-cluster">
-                <div class="footer-brand-summary">
-                    <h3 class="gradient-text">FUTURE LEADERS SUMMIT</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-body); line-height: 1.6;">
-                        An elite technology transformation convergence engineered by the Tinatti Initiative, in configuration with strategic partner Beulafy, hosted by the Department of Crime Management, Federal Polytechnic Nasarawa.
+                <div>
+                    <h3 style="margin-bottom: 0.75rem;">FUTURE LEADERS SUMMIT</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                        Elite technological architecture transformation convergence handled by Tinatti Initiative, alongside strategic engineering partner Beulafy, hosted by the Department of Crime Management, Federal Polytechnic Nasarawa.
                     </p>
                 </div>
                 <div class="footer-directory">
@@ -1689,23 +987,13 @@
                         <li><a href="#about">Ecosystem Blueprint</a></li>
                         <li><a href="#focus">Strategic Architecture</a></li>
                         <li><a href="#agenda">Operational Timeline</a></li>
-                        <li><a href="#challenge">Research Repository</a></li>
                     </ul>
                 </div>
                 <div class="footer-directory">
                     <h4>Allied Tracks</h4>
                     <ul>
-                        <li><a href="#partner">Corporate Affiliation</a></li>
-                        <li><a href="#register">Access Registration</a></li>
-                        <li><a href="#host">Leadership Profiles</a></li>
-                    </ul>
-                </div>
-                <div class="footer-directory">
-                    <h4>Entity Structuring</h4>
-                    <ul style="font-size: 0.85rem; color: var(--text-muted); gap: 0.5rem;">
-                        <li>[TINATTI INITIATIVE]</li>
-                        <li>[BEULAFY]</li>
-                        <li>[DEPARTMENT OF CRIME MANAGEMENT, FEDPOLY NASARAWA]</li>
+                        <li><a href="#partner">Affiliations</a></li>
+                        <li><a href="#register">Access Key Allocation</a></li>
                     </ul>
                 </div>
             </div>
@@ -1715,31 +1003,16 @@
             </div>
 
             <div class="footer-base-row">
-                <div>
-                    &copy; 2026 Digital Transformation, Youth Reformation & Leadership Summit. Comprehensive Global Governance Preservation Enforced.
-                </div>
-                <div class="social-ring-deck">
-                    <a href="#" class="social-ring-node"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="social-ring-node"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="social-ring-node"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-ring-node"><i class="fa-brands fa-x-twitter"></i></a>
+                <div>&copy; 2026 Future Leaders Summit Framework. All Rights Reserved.</div>
+                <div style="display:flex; gap:0.75rem;">
+                    <a href="#" style="color:var(--text-muted);"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" style="color:var(--text-muted);"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Dynamic Overlay Lightbox Platform Interface -->
-    <div class="lightbox-overlay" id="systemLightbox">
-        <div class="lightbox-content-shield">
-            <div class="lightbox-close-trigger" onclick="closeLightbox()"><i class="fa-solid fa-circle-xmark"></i></div>
-            <h3 id="lightboxTitle" style="font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--secondary);">Asset Workspace Preview</h3>
-            <div style="background: rgba(0,0,0,0.5); border: 1px dashed var(--border-glass); border-radius: 16px; padding: 5rem 2rem; color: var(--text-muted);" id="lightboxBody">
-                [ Interactive Display Canvas Asset Pipeline Initialization Block ]
-            </div>
-        </div>
-    </div>
-
-    <!-- Operational Vanilla Logic Configuration Layer Script -->
+    <!-- Clean Mobile Draw UI Scripting -->
     <script>
         function toggleMobileMenu() {
             const menu = document.querySelector('.nav-menu');
@@ -1749,28 +1022,22 @@
                 menu.style.display = 'flex';
                 menu.style.flexDirection = 'column';
                 menu.style.position = 'absolute';
-                menu.style.top = '90px';
+                menu.style.top = '75px';
                 menu.style.left = '0';
                 menu.style.width = '100%';
                 menu.style.background = 'rgba(3, 7, 18, 0.98)';
-                menu.style.padding = '3rem 2rem';
+                menu.style.padding = '2rem 1.5rem';
                 menu.style.borderBottom = '1px solid var(--border-glass)';
-                menu.style.gap = '1.5rem';
+                menu.style.gap = '1.25rem';
+                
+                // Add click handlers on links inside mobile view to auto close modal drop
+                const structuralNodes = menu.querySelectorAll('a');
+                structuralNodes.forEach(node => {
+                    node.addEventListener('click', () => {
+                        menu.style.display = 'none';
+                    });
+                });
             }
-        }
-
-        function openLightbox(title) {
-            document.getElementById('lightboxTitle').innerText = title;
-            document.getElementById('systemLightbox').style.display = 'flex';
-        }
-
-        function closeLightbox() {
-            document.getElementById('systemLightbox').style.display = 'none';
-        }
-
-        function processFormAnalytics(event) {
-            event.preventDefault();
-            alert('Security Matrix Handshake Confirmed: Registration parameters successfully cached inside standard processing logs.');
         }
     </script>
 </body>

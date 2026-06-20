@@ -149,6 +149,219 @@
         .manifesto-words span:nth-child(2) { color: #fbbf24; }
         .manifesto-words span:nth-child(3) { color: #34d399; }
         .manifesto-words span:nth-child(4) { color: #60a5fa; }
+        /* ==========================
+   COMPLETE MOBILE FIX
+   ========================== */
+
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+img,
+iframe,
+video{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.container{
+    width:100%;
+    max-width:1240px;
+    margin:auto;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.section-title,
+.hero-headline,
+.manifesto-title,
+.vision-headline,
+h1,h2,h3,h4,h5,h6{
+    overflow-wrap:break-word;
+    word-wrap:break-word;
+}
+
+@media (max-width:1024px){
+
+    .app-flex,
+    .footer-grid,
+    .manifesto-grid,
+    .impact-grid,
+    .value-prop-grid,
+    .opportunity-grid,
+    .organizer-grid{
+        grid-template-columns:1fr !important;
+    }
+
+    .vision-shield{
+        padding:3rem 1.5rem;
+    }
+
+    .footer-manifesto-row{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .manifesto-words{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+}
+
+@media (max-width:768px){
+
+    .container{
+        padding-left:12px;
+        padding-right:12px;
+    }
+
+    header{
+        height:auto;
+        padding:12px 0;
+    }
+
+    .nav-wrapper{
+        flex-direction:column;
+        gap:12px;
+        text-align:center;
+    }
+
+    .platform-logo{
+        font-size:1rem;
+    }
+
+    #hero{
+        padding-top:130px;
+        padding-bottom:60px;
+    }
+
+    .hero-headline{
+        font-size:2rem !important;
+        line-height:1.15;
+    }
+
+    .hero-subheadline{
+        font-size:1rem;
+    }
+
+    .btn-container{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .btn{
+        width:100%;
+        max-width:100%;
+    }
+
+    .glass-card{
+        padding:1.25rem;
+    }
+
+    .manifesto-wrapper{
+        padding:1.5rem;
+    }
+
+    .vision-shield{
+        padding:2rem 1rem;
+    }
+
+    .vision-shield::before{
+        display:none;
+    }
+
+    .vision-text{
+        text-align:left;
+        text-align-last:left;
+        font-size:1rem;
+    }
+
+    .qr-wrapper{
+        padding:1.5rem;
+    }
+
+    .qr-box{
+        width:150px;
+        height:150px;
+    }
+
+    .qr-url{
+        font-size:1rem;
+        word-break:break-word;
+    }
+
+    .impact-card,
+    .value-card,
+    .opportunity-card{
+        width:100%;
+    }
+
+    .tag-cloud{
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+    }
+
+    .tag-pill{
+        font-size:.75rem;
+    }
+
+    .manifesto-words{
+        font-size:.95rem;
+        gap:.75rem;
+        text-align:center;
+    }
+
+    .footer-brand h3{
+        font-size:1.1rem;
+    }
+}
+
+@media (max-width:480px){
+
+    .section{
+        padding:50px 0;
+    }
+
+    .hero-headline{
+        font-size:1.7rem !important;
+    }
+
+    .section-title,
+    .manifesto-title,
+    .vision-headline{
+        font-size:1.5rem !important;
+    }
+
+    .btn{
+        padding:.85rem 1rem;
+        font-size:.85rem;
+    }
+
+    .hero-badge{
+        font-size:.75rem;
+    }
+
+    .qr-box{
+        width:130px;
+        height:130px;
+    }
+
+    .manifesto-words{
+        flex-direction:column;
+        gap:.35rem;
+    }
+}
     </style>
 </head>
 <body>

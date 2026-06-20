@@ -44,6 +44,8 @@
         }
 
         body {
+    overflow-x: hidden;
+
             background-color: var(--bg-base);
             color: var(--text-body);
             font-family: var(--font-sans);
@@ -66,13 +68,13 @@
         }
 
         /* Layout Framework Foundations */
-        .container {
-            width: 100%;
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
+      .container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
         .section {
             padding: clamp(4rem, 8vw, 8rem) 0;
             position: relative;
@@ -617,6 +619,11 @@
             .btn { width: 100%; }
             .strip-flex { gap: 1rem; flex-direction: column; }
         }
+        .flyer-toolbar-actions a {
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+}
     </style>
 </head>
 <body>
@@ -775,7 +782,12 @@
                     </div>
                     <div class="flyer-toolbar-actions">
                         <button class="btn btn-primary" onclick="alert('Launching Fullscreen View Model Grid...')">Preview Framework</button>
-                        <button class="btn btn-outline" onclick="alert('Downloading high-res brochure packaging structure...')">Download Asset</button>
+                        <a 
+href="/beyoundSurvivalSummit/IMG/summit.jpeg" 
+download="Future-Leaders-Summit-Flyer.jpeg"
+class="btn btn-outline">
+Download Asset
+</a>
                     </div>
                 </div>
             </div>
@@ -789,8 +801,13 @@
                       <img src="/beyoundSurvivalSummit/IMG/image.png"/>
                     </div>
                     <div class="flyer-toolbar-actions">
+                        <a 
+href="/beyoundSurvivalSummit/IMG/image.png" 
+download="Call-For-Papers.png"
+class="btn btn-outline">
+Download Asset
+</a>
                         <button class="btn btn-primary" onclick="alert('Launching Fullscreen View Model Grid...')">Preview Framework</button>
-                        <button class="btn btn-outline" onclick="alert('Downloading high-res brochure packaging structure...')">Download Asset</button>
                     </div>
                 </div>
             </div>
@@ -1078,31 +1095,10 @@
 
     <!-- Clean Mobile Draw UI Scripting -->
     <script>
-        function toggleMobileMenu() {
-            const menu = document.querySelector('.nav-menu');
-            if (menu.style.display === 'flex') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'flex';
-                menu.style.flexDirection = 'column';
-                menu.style.position = 'absolute';
-                menu.style.top = '75px';
-                menu.style.left = '0';
-                menu.style.width = '100%';
-                menu.style.background = 'rgba(3, 7, 18, 0.98)';
-                menu.style.padding = '2rem 1.5rem';
-                menu.style.borderBottom = '1px solid var(--border-glass)';
-                menu.style.gap = '1.25rem';
-                
-                // Add click handlers on links inside mobile view to auto close modal drop
-                const structuralNodes = menu.querySelectorAll('a');
-                structuralNodes.forEach(node => {
-                    node.addEventListener('click', () => {
-                        menu.style.display = 'none';
-                    });
-                });
-            }
-        }
+      function toggleMobileMenu() {
+    const menu = document.querySelector('.nav-menu');
+    menu.classList.toggle('active');
+}
     </script>
 </body>
 </html>
